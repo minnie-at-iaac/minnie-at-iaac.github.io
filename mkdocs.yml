@@ -2,10 +2,10 @@
 site_name: Hola! Welcome to Minnie's MDEF Site
 site_description: Master in Design for Emergent Futures
 site_author: Student Name
-copyright: Copyleft 2023 "Student Name" - GNU Free Documentation License
-repo_name: 'Name : Github Repo'
+copyright: Copyright 2023 Emmanuelle Pangilinan - GNU Free Documentation License
+repo_name: 'minnie-at-iaac.github.io'
 site_url: https://minnie-at-iaac.github.io/
-repo_url: 'hhttps://minnie-at-iaac.github.io/'
+repo_url: 'https://github.com/minnie-at-iaac/minnie-at-iaac.github.io'
 
 
 nav:
@@ -28,16 +28,12 @@ nav:
 extra:
   social:
     # For other social icons at https://squidfunk.github.io/mkdocs-material/setup/adding-social-links/
-    - icon: fontawesome/brands/medium
-      link: https://medium.com/
     - icon: fontawesome/brands/instagram
-      link: https://instagram.com/
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/
+      link: "https://instagram.com/kotsengkuba"
+    - icon: fontawesome/brands/instagram
+      link: "https://instagram.com/minniemakestoys"
     - icon: fontawesome/brands/linkedin
-      link: "https://www.linkedin.com/in/"
-    - icon: fontawesome/brands/github
-      link: "https://github.com/"
+      link: "https://www.linkedin.com/in/minnie-pangilinan"
 
 theme:
   name: material
@@ -66,8 +62,8 @@ theme:
 
 plugins:
   - search
-  - git-revision-date-localized:
-      fallback_to_build_date: true
+#  - git-revision-date-localized:
+#      fallback_to_build_date: true
 
 markdown_extensions:
   - extra
