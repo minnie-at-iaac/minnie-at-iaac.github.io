@@ -59,15 +59,15 @@ theme:
     - navigation.expand
     - navigation.indexes
     - navigation.instant
-    # - navigation.prune
-    # - navigation.sections
+    - navigation.prune
+    - navigation.sections
     - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.top
-    - navigation.tracking
+    #- navigation.tabs.sticky
+    #- navigation.top
+    #- navigation.tracking
 
 plugins:
-  - search
+#  - search
 #  - git-revision-date-localized:
 #      fallback_to_build_date: true
 
