@@ -349,6 +349,19 @@
                   <h1>Home</h1>
                 
                 <p>Minnie here. Welcome!</p>
+<div class="highlight"><pre><span></span><code>Fenced code blocks are like Standard
+Markdown’s regular code blocks, except that
+they’re not indented and instead rely on
+start and end fence lines to delimit the
+code block.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fn</span><span class="p">():</span>
+    <span class="k">pass</span>
+</code></pre></div>
+<div class="admonition test block">
+<p class="admonition-title">Test</p>
+<p>block contents</p>
+</div>
                 
               
               
@@ -421,7 +434,7 @@
       <script>
         app = initialize({
           base: ".",
-          features: ["instant", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking"],
+          features: ["instant", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.prune", "navigation.sections", "navigation.tabs"],
           search: Object.assign({
             worker: "assets/javascripts/worker/search.5eca75d3.min.js"
           }, typeof search !== "undefined" && search)
