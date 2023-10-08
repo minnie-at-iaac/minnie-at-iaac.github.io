@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://minnie-at-iaac.github.io/default-page/</loc>
+         <lastmod>2023-10-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://minnie-at-iaac.github.io/about/me/</loc>
          <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
@@ -16,7 +21,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://minnie-at-iaac.github.io/term1/01-Bootcamp/</loc>
+         <loc>https://minnie-at-iaac.github.io/term1/01-Landing/</loc>
          <lastmod>2023-10-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
