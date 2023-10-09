@@ -1,18 +1,13 @@
+
+```
 Minnie here. Welcome!
-
-```
-Fenced code blocks are like Standard
-Markdown’s regular code blocks, except that
-they’re not indented and instead rely on
-start and end fence lines to delimit the
-code block.
+This is my experimental and experiential journey in MDEF.
 ```
 
-```python
-def fn():
-    pass
+``` javascript
+if ready():
+    lets.go!
 ```
 
-!!! test block
-    block contents
+
 
