@@ -95,7 +95,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Minnie&#39;s MDEF" class="md-header__button md-logo" aria-label="Minnie's MDEF" data-md-component="logo">
       
@@ -204,14 +206,8 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -298,7 +294,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -666,9 +668,75 @@
 
 
 <h1 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h1>
-<p><img alt="" src="../../images/minniecrop.jpg" /></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <strong><a href="https://community.emergentfutures.io/courses/5566525/content">my website</a></strong></p>
+<figure>
+<p><img alt="" src="../../images/minniecrop.jpg" width="300" />
+  </p>
+<figcaption>ahh boba tea</figcaption>
+</figure>
+<div class="admonition bug">
+<p class="admonition-title">This is about me</p>
+<p>This is also me testing out mkdocs haha</p>
+</div>
+<div class="admonition annotate info inline start">
+<p class="admonition-title">I am from the Philippines(1)</p>
+<ul>
+<li>an archipelago in Southeast Asia</li>
+<li>around 16 hours from BCN <img alt="✈" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2708.svg" title=":airplane:" /></li>
+<li>lots of great food <img alt="🥘" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f958.svg" title=":shallow_pan_of_food:" /></li>
+<li>lots of great people <img alt="🧑🏿‍🤝‍🧑🏿" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f9d1-1f3ff-200d-1f91d-200d-1f9d1-1f3ff.svg" title=":people_holding_hands_tone5:" /></li>
+<li>but also lots of problems <img alt="😢" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f622.svg" title=":cry:" /></li>
+</ul>
+</div>
+<ol>
+<li>This is an inline info box</li>
+</ol>
+<p><img alt="Orthographic map of Philippines centered at 12° N, 120° E." src="../../images/PHL_orthographic.svg-01.png" width="400" /></p>
+<p>Text can be <del class="critic">deleted</del> and replacement text <ins class="critic">added</ins>. This can also be
+combined into <del class="critic">one</del><ins class="critic">a single</ins> operation. <mark class="critic">Highlighting</mark> is also
+possible <span class="critic comment">and comments can be added inline</span>.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td><img alt=":material-check:" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/None.svg" title=":material-check:" />     Fetch resource</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><img alt=":material-check-all:" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/None.svg" title=":material-check-all:" /> Update resource</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><img alt=":material-close:" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/None.svg" title=":material-close:" />     Delete resource</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>graph LR
+  A[Start] --&gt; B{Error?};
+  B --&gt;|Yes| C[Hmm...];
+  C --&gt; D[Debug];
+  D --&gt; B;
+  B ----&gt;|No| E[Yay!];</code></pre>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span></p>
+<div class="admonition info inline end">
+<p class="admonition-title">This is another note to the right</p>
+<p class="annotate">Lorem ipsum dolor sit amet, (1) consectetur adipiscing elit.</p>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> I&rsquo;m an annotation! I can contain <code>code</code>, <strong>formatted
+    text</strong>, images, &hellip; basically anything that can be expressed in Markdown.</li>
+</ol>
+</div>
+<p><mark class="critic">
+Statement of Purpose
+</mark>
+<del class="critic">my purpose is to find a better purpose</del>
+to push the boundaries of what i can think and do in my design practice, maybe</p>
+<p>if you&rsquo;re bored, you can check out <strong><a href="https://minniemakes.co" title="weeee">my website</a></strong></p>
 
 
 
@@ -680,6 +748,12 @@
           
           
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -748,7 +822,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.prune", "navigation.sections", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["instant", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.prune", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.94c44541.min.js"></script>
