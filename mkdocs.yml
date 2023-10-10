@@ -11,8 +11,13 @@ repo_url: 'https://github.com/minnie-at-iaac/minnie-at-iaac.github.io'
 nav:
   - About: about/me.md
   - Term 1:
-      - Landing: term1/01-Landing.md
-      - AoWS: term1/02-Atlas of Weak Signals.md
+      - Landing Week: 
+        - Landing: term1/01-Landing.md
+        - Intros: term1/Intros.md
+        - Tours: term1/Tours.md
+      - Documenting Design: term1/Documenting-design.md
+      - Atlas of Weak Signals: term1/02-Atlas of Weak Signals.md
+      - Design Studio 01: term1/Design-studio-01.md
   - Term 2:
       - digi: default-page.md
       - studio: default-page.md
