@@ -7,6 +7,6 @@ hide:
 
 - arrived in Barcelona!
 - registered
-- [Intros](term1/Intros.html)
-- [Tours](term1/Tours.html)
+- [Intros](../Intros)
+- [Tours](../Tours)
 - helped make some tables
