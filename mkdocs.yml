@@ -61,11 +61,13 @@ theme:
   favicon: images/favicon.png
   features:
     - instant
+    - header.autohide
     - navigation.expand
     - navigation.indexes
     - navigation.instant
+    - navigation.instant.progress
     - navigation.prune
-    - navigation.sections
+    - navigation.expand
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
