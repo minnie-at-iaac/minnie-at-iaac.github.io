@@ -12,17 +12,17 @@ nav:
   - About: about/me.md
   - Term 1:
       - Landing Week: 
-        - Landing Week: term1/01-Landing.md
-        - Intros: term1/Intros.md
-        - Tours: term1/Tours.md
+        - Landing Week: term1/01-Landing-week/Landing.md
+        - Intros: term1/01-Landing-week/Intros.md
+#        - Tours: term1/01-Landing-week/Tours.md
       - Documenting Design: 
-        - Documenting Design: term1/Documenting-design.md
-        - Git Problems: term1/Git-problems.md
-      - Atlas of Weak Signals: term1/02-Atlas of Weak Signals.md
-      - Design Studio 01: term1/Design-studio-01.md
-  - Term 2:
-      - digi: default-page.md
-      - studio: default-page.md
+        - Documenting Design: term1/02-Documenting-design/Documenting-design.md
+        - Git Problems: term1/02-Documenting-design/Git-problems.md
+      - Design Studio 01: term1/03-Design-studio/Design-studio-01.md
+      - Atlas of Weak Signals: term1/04-Atlas-of-weak-signals/Atlas of Weak Signals.md
+#  - Term 2:
+#      - digi: default-page.md
+#      - studio: default-page.md
   - Master project:
       - Initial ideas: project/project.md
 
