@@ -12,10 +12,12 @@ nav:
   - About: about/me.md
   - Term 1:
       - Landing Week: 
-        - Landing: term1/01-Landing.md
+        - Landing Week: term1/01-Landing.md
         - Intros: term1/Intros.md
         - Tours: term1/Tours.md
-      - Documenting Design: term1/Documenting-design.md
+      - Documenting Design: 
+        - Documenting Design: term1/Documenting-design.md
+        - Git Problems: term1/Git-problems.md
       - Atlas of Weak Signals: term1/02-Atlas of Weak Signals.md
       - Design Studio 01: term1/Design-studio-01.md
   - Term 2:
@@ -121,6 +123,8 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - pymdownx.escapeall:
+        hardbreak: true
   - attr_list
   - pymdownx.tabbed
   
