@@ -42,7 +42,7 @@ theme:
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: my-light
+      scheme: my-theme
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode

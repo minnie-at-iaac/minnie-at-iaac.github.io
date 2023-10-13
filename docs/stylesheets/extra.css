@@ -9,17 +9,11 @@
     --md-typeset-a-color: rgb(12, 240, 190);*/
 }
 
-[data-md-color-scheme="my-light"] {
+[data-md-color-scheme="my-theme"] {
   --md-primary-fg-color:        #66BB6A;
   --md-primary-fg-color--light: #455A64;
   --md-primary-fg-color--dark:  #E8EAF6;
   --md-typeset-a-color: #1DE9B6;
-}
-
-[data-md-color-scheme="my-dark"] {
-  --md-primary-fg-color:        #0097A7;
-  --md-primary-fg-color--light: #0097A7;
-  --md-primary-fg-color--dark:  #0097A7;
 }
 
 
