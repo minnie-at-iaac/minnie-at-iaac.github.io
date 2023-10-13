@@ -42,11 +42,10 @@ theme:
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default
+      scheme: my-light
       toggle:
         icon: material/brightness-7 
         name: Switch to dark mode
-      primary: yellow
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
@@ -54,12 +53,12 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+      primary: black
   font:
     # See available fonts at https://fonts.google.com/
-    text: Space Grotesk
-    code: Cutive Mono
-  icon:
-    logo: material/lightbulb-outline
+    text: Karla
+    code: Inconsolata
+  logo: images/favicon.png
   favicon: images/favicon.png
   features:
     - instant
@@ -79,6 +78,19 @@ plugins:
   - search
 #  - git-revision-date-localized:
 #      fallback_to_build_date: true
+  - glightbox:
+       touchNavigation: true
+       loop: true
+       effect: zoom
+       slide_effect: slide
+       width: 100%
+       height: auto
+       zoomable: true
+       draggable: true
+       skip_classes:
+         - custom-skip-class-name
+       auto_caption: false
+       caption_position: bottom
 
 markdown_extensions:
   - extra

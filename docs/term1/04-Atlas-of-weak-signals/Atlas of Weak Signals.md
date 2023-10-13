@@ -24,7 +24,18 @@ I am unsure but it looks like Design space contains AoWS and AoWS contains the w
 The first activity is involved the entire class running the "game"  for the first time. 
 
 ### Design Sprint
-During my undergrad, I, together with my groupmate, created a card game similar to this one. It was called "Design Sprint". Ours was focused on current and more localized context ("stronger signals"?), while the AoWS cards are more general and conceptual.
+During my undergrad, my friend and I created a card game similar to this one. It was called "Design Sprint". Ours was focused on current and more localized context ("stronger signals"?), while the AoWS cards are more general and conceptual.
+
+<figure markdown>
+  ![2019. Design Sprint Prototype](../../images/AoWS/design-sprint-01.jpg){data-gallery="design-sprint"}
+  <figcaption>2019. Design Sprint Prototype</figcaption>
+</figure>
+<figure markdown>
+  ![2019. Playtesting](../../images/AoWS/design-sprint-02.jpg){data-gallery="design-sprint"}
+  <figcaption>2019. Playtesting</figcaption>
+</figure>
+
+
 
 ## Building a Design Space
 
