@@ -41,4 +41,3 @@ For my prototype, I wanted to explore Role 3 and create one that explores/facili
 ![](../../images/Design%20Studio/Malau04.jpg){width="300" data-gallery="prototyping-activity-1"}
 ![](../../images/Design%20Studio/Malau05.jpg){width="300" data-gallery="prototyping-activity-1"}
 
-!!! info "to do: make gif"
