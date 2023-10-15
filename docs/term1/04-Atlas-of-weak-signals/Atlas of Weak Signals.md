@@ -39,9 +39,7 @@ We then repeated the activity in smaller groups of four.
 
 ### Suggest new cards
 
-![](../../images/AoWS/new-card-01.jpg){width="30%" data-gallery="aows-new-cards"}
-![](../../images/AoWS/new-card-02.jpg){width="30%" data-gallery="aows-new-cards"}
-![](../../images/AoWS/new-card-03.jpg){width="30%" data-gallery="aows-new-cards"}
+![](../../images/AoWS/proposed-new-cards.jpg){width="100%" data-gallery="aows-new-cards"}
 
 ### Design Sprint
 During my undergrad, my friend and I created a card game similar to this one. It was called "Design Sprint". Ours was focused on current and more localized context ("stronger signals"?), while the AoWS cards are more general and conceptual.
@@ -59,6 +57,8 @@ During my undergrad, my friend and I created a card game similar to this one. It
 ## Building MY Design Space
 ### Current Version
 !!! note "TO DO: put the final here"
+
+<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVNcPeXLc=/?moveToViewport=386,219,966,533&embedId=833514131418" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 
 ### Multiscalar Personal Design Space
 <figure markdown>
