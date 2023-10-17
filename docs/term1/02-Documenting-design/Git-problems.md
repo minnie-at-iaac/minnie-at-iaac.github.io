@@ -153,3 +153,6 @@ insert this html snippet in your .md file, just change the image path, width and
   <figcaption>ahh boba tea</figcaption>
 </figure>
 ```
+
+!!! bug "if you find anything wrong or missing in this page"
+    send me a message! or email me at emmanuelle.pangilinan@students.iaac.net
