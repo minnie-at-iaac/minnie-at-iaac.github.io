@@ -45,6 +45,27 @@ here's a handy pdf i found
 ## My page is up but the contents are not formatted
 probably the .html, .css, and .js files are not generated correctly
 
+## I can't put my navigation at the top
+in your mkdocs.yml file, **navigation.tabs** should be under theme and features:
+
+```
+theme:
+  features:
+    - navigation.tabs
+```
+
+next, you need to have **mkdocs-material** at least version 9.0 (i think, so it's best to get the latest one)
+so you have to update your **requirements.txt** like this to get the latest version:
+``` hl_lines="2"
+mkdocs~=1.5,>=1.5.3
+mkdocs-material>1.0.0
+mkdocs-material-extensions~=1.2
+```
+
+[mkdocs-material reference](https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs "mkdocs-material reference")
+
+
+
 ## How to embed a .pdf
 in any part of a markdown file (a file in .md), we can insert html code
 <br>
@@ -61,6 +82,9 @@ with html:
 
 or add this to mkdocs.yml, under the *markdown_extensions:*
 ```
+markdown_extensions:
   - pymdownx.escapeall:
         hardbreak: true
 ```
+then you can add a new line by using two spaces
+
