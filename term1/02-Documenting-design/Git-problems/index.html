@@ -574,6 +574,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#first-things-first-git-status" class="md-nav__link">
+    First things first, git status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#git-not-found" class="md-nav__link">
     git not found
   </a>
@@ -588,15 +595,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#my-page-is-up-but-the-contents-are-not-formatted" class="md-nav__link">
-    My page is up but the contents are not formatted
+  <a href="#-version-and-help-are-your-friends" class="md-nav__link">
+    --version and --help are your friends
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#i-cant-put-my-navigation-at-the-top" class="md-nav__link">
-    I can't put my navigation at the top
+  <a href="#my-page-is-up-but-it-looks-bad" class="md-nav__link">
+    My page is up but it looks bad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-want-to-put-my-navigation-at-the-top" class="md-nav__link">
+    I want to put my navigation at the top
   </a>
   
 </li>
@@ -611,6 +625,13 @@
         <li class="md-nav__item">
   <a href="#how-to-add-a-new-line" class="md-nav__link">
     How to add a new line
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-center-an-image" class="md-nav__link">
+    How to center an image
   </a>
   
 </li>
@@ -778,6 +799,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#first-things-first-git-status" class="md-nav__link">
+    First things first, git status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#git-not-found" class="md-nav__link">
     git not found
   </a>
@@ -792,15 +820,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#my-page-is-up-but-the-contents-are-not-formatted" class="md-nav__link">
-    My page is up but the contents are not formatted
+  <a href="#-version-and-help-are-your-friends" class="md-nav__link">
+    --version and --help are your friends
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#i-cant-put-my-navigation-at-the-top" class="md-nav__link">
-    I can't put my navigation at the top
+  <a href="#my-page-is-up-but-it-looks-bad" class="md-nav__link">
+    My page is up but it looks bad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-want-to-put-my-navigation-at-the-top" class="md-nav__link">
+    I want to put my navigation at the top
   </a>
   
 </li>
@@ -815,6 +850,13 @@
         <li class="md-nav__item">
   <a href="#how-to-add-a-new-line" class="md-nav__link">
     How to add a new line
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-center-an-image" class="md-nav__link">
+    How to center an image
   </a>
   
 </li>
@@ -840,67 +882,122 @@
 <h1 id="u-git-a-problem">u .git a problem?<a class="headerlink" href="#u-git-a-problem" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">let&rsquo;s try to fix that</p>
-<p>here i&rsquo;ll document the issues that i&rsquo;ve encountered in setting up this website</p>
+<p>here i&rsquo;ll document the issues that i&rsquo;ve encountered in setting up this website<br />
+this covers git, mkdocs, mkdocs-material, html, etc.</p>
 </div>
-<p>to troubleshoot, first try git status</p>
+<h2 id="first-things-first-git-status">First things first, git status<a class="headerlink" href="#first-things-first-git-status" title="Permanent link">&para;</a></h2>
 <p>if you get this error
 <div class="highlight"><pre><span></span><code>fatal: not a git repository (or any of the parent directories): .git
 </code></pre></div></p>
-<p>that means that you have not created or cloned a repository properly, or not inside the correct folder
-check the file explorer and look for the &ldquo;root&rdquo; folder - this is the topmost folder of your local copy of the repository -</p>
+<p>This means that you have not created or cloned a repository properly, or not inside the correct folder.<br />
+Check the file explorer and look for the correct folder, we call this your &ldquo;root&rdquo; folder &ndash; this is the topmost folder of the local copy of your repository &ndash;</p>
 <h2 id="git-not-found">git not found<a class="headerlink" href="#git-not-found" title="Permanent link">&para;</a></h2>
-<p>if you try any commannd (e.g. &lsquo;git status&rsquo;) and get this error
+<p>if you try any command (e.g. &lsquo;git status&rsquo;) and get this error
 <div class="highlight"><pre><span></span><code>git : The term &#39;git&#39; is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was 
 included, verify that the path is correct and try again.
 At line:1 char:1
 </code></pre></div>
-the easiest solution is to re-install git</p>
+The easiest solution is to re-install git. </p>
 <h2 id="git-cheat-sheet">git Cheat Sheet<a class="headerlink" href="#git-cheat-sheet" title="Permanent link">&para;</a></h2>
-<p>these are the commands you need first  <br />
-for setting up:
+<p>These are the commands you need first  <br />
+For setting up:
 <div class="highlight"><pre><span></span><code>git init
 git clone
 </code></pre></div></p>
-<p>for making updates:
+<p>And for making updates:
 <div class="highlight"><pre><span></span><code>git pull
 git add .
 git commit -m &quot;i will describe my changes in this commit message&quot;
 git push
 </code></pre></div></p>
-<p>here&rsquo;s a handy pdf i found</p>
+<p>Here&rsquo;s a handy pdf i found</p>
 <iframe width="100%" height="800" src="https://education.github.com/git-cheat-sheet-education.pdf"></iframe>
 
-<h2 id="my-page-is-up-but-the-contents-are-not-formatted">My page is up but the contents are not formatted<a class="headerlink" href="#my-page-is-up-but-the-contents-are-not-formatted" title="Permanent link">&para;</a></h2>
-<p>probably the .html, .css, and .js files are not generated correctly</p>
-<h2 id="i-cant-put-my-navigation-at-the-top">I can&rsquo;t put my navigation at the top<a class="headerlink" href="#i-cant-put-my-navigation-at-the-top" title="Permanent link">&para;</a></h2>
-<p>in your mkdocs.yml file, <strong>navigation.tabs</strong> should be under theme and features:</p>
+<h2 id="-version-and-help-are-your-friends">--version and --help are your friends<a class="headerlink" href="#-version-and-help-are-your-friends" title="Permanent link">&para;</a></h2>
+<p>Entering any command then space then --version will verify that you have the command installed</p>
+<p><div class="highlight"><pre><span></span><code>C:\Users\Minnie&gt;gi --version
+&#39;gi&#39; is not recognized as an internal or external command,
+operable program or batch file.
+</code></pre></div>
+you may have just mistyped it  </p>
+<p>Command then space then &ndash;help will show you the subcommands and parameters you can put with the command.
+<div class="highlight"><pre><span></span><code>C:\Users\Minnie&gt;mkdocs --help
+Usage: mkdocs [OPTIONS] COMMAND [ARGS]...
+
+  MkDocs - Project documentation with Markdown.
+
+Options:
+  -V, --version         Show the version and exit.
+  -q, --quiet           Silence warnings
+  -v, --verbose         Enable verbose output
+  --color / --no-color  Force enable or disable color and wrapping for the output. Default is auto-detect.
+  -h, --help            Show this message and exit.
+
+Commands:
+  build      Build the MkDocs documentation
+  get-deps   Show required PyPI packages inferred from plugins in mkdocs.yml
+  gh-deploy  Deploy your documentation to GitHub Pages
+  new        Create a new MkDocs project
+  serve      Run the builtin development server
+</code></pre></div></p>
+<h2 id="my-page-is-up-but-it-looks-bad">My page is up but it looks bad<a class="headerlink" href="#my-page-is-up-but-it-looks-bad" title="Permanent link">&para;</a></h2>
+<p>Probably the .html, .css, and .js files are not generated correctly<br />
+1. check if the github actions ran successfully<br />
+<a class="glightbox" href="../../../images/Git%20Problems/check-github-actions.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../images/Git%20Problems/check-github-actions.gif" /></a>
+2. check the filenames in the mkdocs.yml, all the .md files you put under <strong>nav</strong> should exist<br />
+<div class="highlight"><pre><span></span><code>nav:
+  - About: about/me.md
+  - Term 1:
+      - Landing Week: 
+        - Landing Week: term1/01-Landing-week/Landing.md
+        - Intros: term1/01-Landing-week/Intros.md
+#        - Tours: term1/01-Landing-week/Tours.md
+      - Documenting Design: 
+        - Documenting Design: term1/02-Documenting-design/Documenting-design.md
+        - Git Problems: term1/02-Documenting-design/Git-problems.md
+      - Design Studio 01: term1/03-Design-studio/Design-studio-01.md
+      - Atlas of Weak Signals: term1/04-Atlas-of-weak-signals/Atlas of Weak Signals.md
+#  - Term 2:
+#      - digi: default-page.md
+#      - studio: default-page.md
+  - Master project:
+      - Initial ideas: project/project.md
+</code></pre></div></p>
+<h2 id="i-want-to-put-my-navigation-at-the-top">I want to put my navigation at the top<a class="headerlink" href="#i-want-to-put-my-navigation-at-the-top" title="Permanent link">&para;</a></h2>
+<p>In the mkdocs.yml file, <strong>navigation.tabs</strong> should be under theme and features:</p>
 <div class="highlight"><pre><span></span><code>theme:
   features:
     - navigation.tabs
 </code></pre></div>
-<p>next, you need to have <strong>mkdocs-material</strong> at least version 9.0 (i think, so it&rsquo;s best to get the latest one)
-so you have to update your <strong>requirements.txt</strong> like this to get the latest version:
+<p>Next, you need to have <strong>mkdocs-material</strong> at least version 9.0 (i&rsquo;m not sure, so it&rsquo;s best to get the latest one)
+so you have to update your <strong>requirements.txt</strong> like this to get the latest version:</p>
 <div class="highlight"><pre><span></span><code>mkdocs~=1.5,&gt;=1.5.3
 <span class="hll">mkdocs-material&gt;1.0.0
 </span>mkdocs-material-extensions~=1.2
-</code></pre></div></p>
-<p><a href="https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs" title="mkdocs-material reference">mkdocs-material reference</a></p>
+</code></pre></div>
+<p>More about navigation here: <a href="https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs" title="mkdocs-material reference">mkdocs-material reference</a></p>
 <h2 id="how-to-embed-a-pdf">How to embed a .pdf<a class="headerlink" href="#how-to-embed-a-pdf" title="Permanent link">&para;</a></h2>
-<p>in any part of a markdown file (a file in .md), we can insert html code
-<br>
-the cheat sheet above looks like this in my code:
+<p>in any part of a markdown file (a file in .md), we can insert html code  </p>
+<p>the cheat sheet above looks like this in my code:
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://education.github.com/git-cheat-sheet-education.pdf&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></p>
 <h2 id="how-to-add-a-new-line">How to add a new line<a class="headerlink" href="#how-to-add-a-new-line" title="Permanent link">&para;</a></h2>
 <p>with html:
 <div class="highlight"><pre><span></span><code>&lt;br&gt;
 </code></pre></div></p>
-<p>or add this to mkdocs.yml, under the <em>markdown_extensions:</em>
-<div class="highlight"><pre><span></span><code>markdown_extensions:
-  - pymdownx.escapeall:
-        hardbreak: true
-</code></pre></div>
+<p>or add this to mkdocs.yml, under the <strong>markdown_extensions:</strong></p>
+<p><div class="highlight"><pre><span></span><code>markdown_extensions:
+<span class="hll">  - pymdownx.escapeall:
+</span><span class="hll">        hardbreak: true
+</span></code></pre></div>
 then you can add a new line by using two spaces</p>
+<h2 id="how-to-center-an-image">How to center an image<a class="headerlink" href="#how-to-center-an-image" title="Permanent link">&para;</a></h2>
+<p>insert this html snippet in your .md file, just change the image path, width and caption:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">figure</span> <span class="na">markdown</span><span class="p">&gt;</span>
+  ![](../images/minniecrop.jpg){ width=&quot;300&quot; }
+  <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>ahh boba tea<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</code></pre></div></p>
 
 
 
