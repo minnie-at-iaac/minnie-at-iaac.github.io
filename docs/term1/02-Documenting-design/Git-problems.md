@@ -103,7 +103,7 @@ nav:
 ## I want to put my navigation at the top
 In the mkdocs.yml file, **navigation.tabs** should be under theme and features:
 
-```
+``` yaml
 theme:
   features:
     - navigation.tabs
@@ -138,7 +138,7 @@ with html:
 
 or add this to mkdocs.yml, under the **markdown_extensions:**
 
-``` hl_lines="2-3"
+``` yaml hl_lines="2-3"
 markdown_extensions:
   - pymdownx.escapeall:
         hardbreak: true
