@@ -595,6 +595,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#i-cant-put-my-navigation-at-the-top" class="md-nav__link">
+    I can't put my navigation at the top
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-to-embed-a-pdf" class="md-nav__link">
     How to embed a .pdf
   </a>
@@ -792,6 +799,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#i-cant-put-my-navigation-at-the-top" class="md-nav__link">
+    I can't put my navigation at the top
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-to-embed-a-pdf" class="md-nav__link">
     How to embed a .pdf
   </a>
@@ -858,6 +872,19 @@ git push
 
 <h2 id="my-page-is-up-but-the-contents-are-not-formatted">My page is up but the contents are not formatted<a class="headerlink" href="#my-page-is-up-but-the-contents-are-not-formatted" title="Permanent link">&para;</a></h2>
 <p>probably the .html, .css, and .js files are not generated correctly</p>
+<h2 id="i-cant-put-my-navigation-at-the-top">I can&rsquo;t put my navigation at the top<a class="headerlink" href="#i-cant-put-my-navigation-at-the-top" title="Permanent link">&para;</a></h2>
+<p>in your mkdocs.yml file, <strong>navigation.tabs</strong> should be under theme and features:</p>
+<div class="highlight"><pre><span></span><code>theme:
+  features:
+    - navigation.tabs
+</code></pre></div>
+<p>next, you need to have <strong>mkdocs-material</strong> at least version 9.0 (i think, so it&rsquo;s best to get the latest one)
+so you have to update your <strong>requirements.txt</strong> like this to get the latest version:
+<div class="highlight"><pre><span></span><code>mkdocs~=1.5,&gt;=1.5.3
+<span class="hll">mkdocs-material&gt;1.0.0
+</span>mkdocs-material-extensions~=1.2
+</code></pre></div></p>
+<p><a href="https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs" title="mkdocs-material reference">mkdocs-material reference</a></p>
 <h2 id="how-to-embed-a-pdf">How to embed a .pdf<a class="headerlink" href="#how-to-embed-a-pdf" title="Permanent link">&para;</a></h2>
 <p>in any part of a markdown file (a file in .md), we can insert html code
 <br>
@@ -869,9 +896,11 @@ the cheat sheet above looks like this in my code:
 <div class="highlight"><pre><span></span><code>&lt;br&gt;
 </code></pre></div></p>
 <p>or add this to mkdocs.yml, under the <em>markdown_extensions:</em>
-<div class="highlight"><pre><span></span><code>  - pymdownx.escapeall:
+<div class="highlight"><pre><span></span><code>markdown_extensions:
+  - pymdownx.escapeall:
         hardbreak: true
-</code></pre></div></p>
+</code></pre></div>
+then you can add a new line by using two spaces</p>
 
 
 
