@@ -965,9 +965,9 @@ Commands:
 </code></pre></div></p>
 <h2 id="i-want-to-put-my-navigation-at-the-top">I want to put my navigation at the top<a class="headerlink" href="#i-want-to-put-my-navigation-at-the-top" title="Permanent link">&para;</a></h2>
 <p>In the mkdocs.yml file, <strong>navigation.tabs</strong> should be under theme and features:</p>
-<div class="highlight"><pre><span></span><code>theme:
-  features:
-    - navigation.tabs
+<div class="highlight"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">features</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.tabs</span>
 </code></pre></div>
 <p>Next, you need to have <strong>mkdocs-material</strong> at least version 9.0 (i&rsquo;m not sure, so it&rsquo;s best to get the latest one)
 so you have to update your <strong>requirements.txt</strong> like this to get the latest version:</p>
@@ -986,9 +986,9 @@ so you have to update your <strong>requirements.txt</strong> like this to get th
 <div class="highlight"><pre><span></span><code>&lt;br&gt;
 </code></pre></div></p>
 <p>or add this to mkdocs.yml, under the <strong>markdown_extensions:</strong></p>
-<p><div class="highlight"><pre><span></span><code>markdown_extensions:
-<span class="hll">  - pymdownx.escapeall:
-</span><span class="hll">        hardbreak: true
+<p><div class="highlight"><pre><span></span><code><span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="hll"><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.escapeall</span><span class="p">:</span>
+</span><span class="hll"><span class="w">        </span><span class="nt">hardbreak</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
 then you can add a new line by using two spaces</p>
 <h2 id="how-to-center-an-image">How to center an image<a class="headerlink" href="#how-to-center-an-image" title="Permanent link">&para;</a></h2>
