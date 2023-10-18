@@ -77,34 +77,44 @@ Had reviews with Guillem and Jana this monday.
 
 The morning session was with Grayson and Drishya, their ideas were interesting! Loved how Drishya is so knowledgeable and passionate about differences in human bodies and how Grayson was already looking into connecting with groups/communities.
 
-Key take-aways are: 
-
-* Good to have a to-do list in the design space  
-* Communication practices in sustainability have become marketing (greenwashing?)
-- Policy is not agile
-- We can use GPT/tech as meditation and reflection
-- Reddit can be an avenue for data gathering. Reddit/GPT is also an timestamp of society.
-- Developing methodologies and building tools are important (and are part of the research)
-- The "solution" is/can be exploration
-- the connecting thread in MY design space seems like "care": community and planetary
-
-On Health-related issues
-
-- Open practice in fablabs in health (sector) is not common (so this is kind of a novel area)
-- Maker practices are not usually related to the body
+!!! abstract "Key points"
 
 
-Resources:
+    * Good to have a to-do list in the design space  
+    * Communication practices in sustainability have become marketing (greenwashing?)
+    - Policy is not agile
+    - We can use GPT/tech as meditation and reflection
+    - Reddit can be an avenue for data gathering. Reddit/GPT is also an timestamp of society.
+    - Developing methodologies and building tools are important (and are part of the research)
+    - The "solution" is/can be exploration
+    - the connecting thread in MY design space seems like {++care++}: community and planetary
 
-- On food waste: **[Too good to go](www.toogoodtogo.com)**
-- **[The Centre de Cultura Contemporània de Barcelona](https://www.cccb.org/en)**
-- On gender and sex: Judith Butler
-- On plastics: **[Plastic Justice](https://plasticjustice.eu)**
+    On Health-related issues
 
-To-do:
+    - Open practice in fablabs in health (sector) is not common (so this is kind of a novel area)
+    - Maker practices are not usually related to the body
 
-- [ ] plot my or others' past work in the D.S.
-- [ ] add references in the D.S.
+
+!!! info "Resources"
+
+    - On food waste: **[Too good to go](www.toogoodtogo.com)**
+    - **[The Centre de Cultura Contemporània de Barcelona](https://www.cccb.org/en)**
+    - On gender and sex: Judith Butler
+    - On plastics: **[Plastic Justice](https://plasticjustice.eu)**
+
+??? info "To-do"
+
+    - [ ] plot my or others' past work in the D.S.
+        - [ ] Brakong
+        - [ ] UP FABLAB x HEED
+        - [ ] AA3 x Cloop
+        - [ ] UB GBC Project and CSR activities
+        - [ ] protests
+    - [ ] add references in the D.S.
+        - [ ] Precious plastics
+        - [ ] News article(s) on ocean plastics
+        - [x] Greenpeace ph report on waste trade
+        - [ ] Learnings from: Design as Learning  :open_book: 
 
 > On Climate Accountability: Do I want to tackle the cause (like informing the public) or the consequences (like what to do with the trash)?
 
