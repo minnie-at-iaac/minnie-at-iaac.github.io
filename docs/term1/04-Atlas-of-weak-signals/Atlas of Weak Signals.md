@@ -71,7 +71,47 @@ During my undergrad, my friend and I created a card game similar to this. It was
 
 
 ## Building MY Design Space
-### Current Version
+
+### 16 October Reviews
+Had reviews with Guillem and Jana this monday. 
+
+The morning session was with Grayson and Drishya, their ideas were interesting! Loved how Drishya is so knowledgeable and passionate about differences in human bodies and how Grayson was already looking into connecting with groups/communities.
+
+Key take-aways are: 
+
+* Good to have a to-do list in the design space  
+* Communication practices in sustainability have become marketing (greenwashing?)
+- Policy is not agile
+- We can use GPT/tech as meditation and reflection
+- Reddit can be an avenue for data gathering. Reddit/GPT is also an timestamp of society.
+- Developing methodologies and building tools are important (and are part of the research)
+- The "solution" is/can be exploration
+- the connecting thread in MY design space seems like "care": community and planetary
+
+On Health-related issues
+
+- Open practice in fablabs in health (sector) is not common (so this is kind of a novel area)
+- Maker practices are not usually related to the body
+
+
+Resources:
+
+- On food waste: **[Too good to go](www.toogoodtogo.com)**
+- **[The Centre de Cultura Contemporània de Barcelona](https://www.cccb.org/en)**
+- On gender and sex: Judith Butler
+- On plastics: **[Plastic Justice](https://plasticjustice.eu)**
+
+To-do:
+
+- [ ] plot my or others' past work in the D.S.
+- [ ] add references in the D.S.
+
+> On Climate Accountability: Do I want to tackle the cause (like informing the public) or the consequences (like what to do with the trash)?
+
+
+
+
+### Initial Version
 This is my ongoing Design Space. For the initial submission, I have created a board with various concepts that I am interested in. The Weak Signals included are: Climate Conscience, Rural Futures, Truth Wars, Technology for Equality. I also added Holistic Heathcare and Well-being. 
 
 It still is a brain dump of the various issues I want to tackle. I plan to update this, adding connections and tuning in to a specific topic, as we go. 
