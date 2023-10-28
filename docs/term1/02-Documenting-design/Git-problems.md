@@ -153,6 +153,12 @@ insert this html snippet in your .md file, just change the image path, width and
   <figcaption>ahh boba tea</figcaption>
 </figure>
 ```
+## How to add a link that opens in a new tab
+Add **{:target="_blank"}** after the end parenthesis, for example:
+
+```
+Opens in a [new tab](https://hackmd.io/dD_c65SVSgqPHJwa56zHew "hover text"){:target="_blank"}
+```
 
 !!! bug "if you find anything wrong or missing in this page"
     send me a message! or email me at emmanuelle.pangilinan@students.iaac.net
