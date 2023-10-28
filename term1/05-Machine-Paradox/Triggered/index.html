@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
@@ -779,172 +779,10 @@
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQgerue-YyYcLRTJawOIUOKAdpP8VhmkDQ1P8AJZucsmuzc5au8tcNQx4a_o2y-S16UtLv_2gLkXZEA/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 <details>
-<summary>Current code for LED strip</summary>
-<div class="highlight"><pre><span></span><code>// A basic everyday NeoPixel strip test program.
-
-// NEOPIXEL BEST PRACTICES for most reliable operation:
-// - Add 1000 uF CAPACITOR between NeoPixel strip&#39;s + and - connections.
-// - MINIMIZE WIRING LENGTH between microcontroller board and first pixel.
-// - NeoPixel strip&#39;s DATA-IN should pass through a 300-500 OHM RESISTOR.
-// - AVOID connecting NeoPixels on a LIVE CIRCUIT. If you must, ALWAYS
-//   connect GROUND (-) first, then +, then data.
-// - When using a 3.3V microcontroller with a 5V-powered NeoPixel strip,
-//   a LOGIC-LEVEL CONVERTER on the data line is STRONGLY RECOMMENDED.
-// (Skipping these may work OK on your workbench but can fail in the field)
-
-#include &lt;Adafruit_NeoPixel.h&gt;
-#ifdef __AVR__
-#include &lt;avr/power.h&gt; // Required for 16 MHz Adafruit Trinket
-#endif
-
-// Which pin on the Arduino is connected to the NeoPixels?
-// On a Trinket or Gemma we suggest changing this to 1:
-#define LED_PIN    2
-// How many NeoPixels are attached to the Arduino?
-#define LED_COUNT 50
-// PIN to expect trigger
-#define TRIGGER_PIN 3
-
-// Declare our NeoPixel strip object:
-Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
-// Argument 1 = Number of pixels in NeoPixel strip
-// Argument 2 = Arduino pin number (most are valid)
-// Argument 3 = Pixel type flags, add together as needed:
-//   NEO_KHZ800  800 KHz bitstream (most NeoPixel products w/WS2812 LEDs)
-//   NEO_KHZ400  400 KHz (classic &#39;v1&#39; (not v2) FLORA pixels, WS2811 drivers)
-//   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)
-//   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)
-//   NEO_RGBW    Pixels are wired for RGBW bitstream (NeoPixel RGBW products)
-
-
-unsigned int state;
-int colorWipeRate;
-
-// setup() function -- runs once at startup --------------------------------
-
-void setup() {
-// These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
-// Any other board, you can remove this part (but no harm leaving it):
-#if defined(__AVR_ATtiny85__) &amp;&amp; (F_CPU == 16000000)
-clock_prescale_set(clock_div_1);
-#endif
-// END of Trinket-specific code.
-
-strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
-strip.show();            // Turn OFF all pixels ASAP
-strip.setBrightness(50); // Set BRIGHTNESS to about 1/5 (max = 255)
-
-pinMode(TRIGGER_PIN, INPUT);
-state = 0;
-colorWipeRate = 50;
-//attachInterrupt(digitalPinToInterrupt(TRIGGER_PIN),isr,RISING); // trigger ISR on rising edge of master voltage signal
-}
-
-
-// loop() function -- runs repeatedly as long as board is on ---------------
-
-void loop() {
-// Fill along the length of the strip in various colors...
-    colorWipe(strip.Color(255,   0,   0), colorWipeRate); // Red
-    colorWipe(strip.Color(  0, 255,   0), colorWipeRate); // Green
-    colorWipe(strip.Color(  0,   0, 255), colorWipeRate); // Blue
-
-    colorWipe(strip.Color(255,   0,   0), colorWipeRate); // Red
-    colorWipe(strip.Color(  0, 255,   0), colorWipeRate); // Green
-    colorWipe(strip.Color(  0,   0, 255), colorWipeRate); // Blue
-
-    colorWipeRate = colorWipeRate - 2;
-    if(colorWipeRate &lt;= 2)
-    {
-    colorWipeRate = 2;
-    }
-}
-
-void isr() {
-state = 1;
-}
-
-
-// Some functions of our own for creating animated effects -----------------
-
-// Fill strip pixels one after another with a color. Strip is NOT cleared
-// first; anything there will be covered pixel by pixel. Pass in color
-// (as a single &#39;packed&#39; 32-bit value, which you can get by calling
-// strip.Color(red, green, blue) as shown in the loop() function above),
-// and a delay time (in milliseconds) between pixels.
-void colorWipe(uint32_t color, int wait) {
-for(int i=0; i&lt;strip.numPixels(); i++) { // For each pixel in strip...
-    //if(digitalRead(TRIGGER_PIN) == 1) // if signal is 0, lights should turn on
-    //{
-    strip.setPixelColor(i, color);         //  Set pixel&#39;s color (in RAM)
-    strip.show();                          //  Update strip to match
-    //}
-    delay(wait);                           //  Pause for a moment 
-}
-}
-
-// Theater-marquee-style chasing lights. Pass in a color (32-bit value,
-// a la strip.Color(r,g,b) as mentioned above), and a delay time (in ms)
-// between frames.
-void theaterChase(uint32_t color, int wait) {
-for(int a=0; a&lt;10; a++) {  // Repeat 10 times...
-    for(int b=0; b&lt;3; b++) { //  &#39;b&#39; counts from 0 to 2...
-    strip.clear();         //   Set all pixels in RAM to 0 (off)
-    // &#39;c&#39; counts up from &#39;b&#39; to end of strip in steps of 3...
-    for(int c=b; c&lt;strip.numPixels(); c += 3) {
-        strip.setPixelColor(c, color); // Set pixel &#39;c&#39; to value &#39;color&#39;
-    }
-    strip.show(); // Update strip with new contents
-    delay(wait);  // Pause for a moment
-    }
-}
-}
-
-// Rainbow cycle along whole strip. Pass delay time (in ms) between frames.
-void rainbow(int wait) {
-// Hue of first pixel runs 5 complete loops through the color wheel.
-// Color wheel has a range of 65536 but it&#39;s OK if we roll over, so
-// just count from 0 to 5*65536. Adding 256 to firstPixelHue each time
-// means we&#39;ll make 5*65536/256 = 1280 passes through this loop:
-for(long firstPixelHue = 0; firstPixelHue &lt; 5*65536; firstPixelHue += 256) {
-    // strip.rainbow() can take a single argument (first pixel hue) or
-    // optionally a few extras: number of rainbow repetitions (default 1),
-    // saturation and value (brightness) (both 0-255, similar to the
-    // ColorHSV() function, default 255), and a true/false flag for whether
-    // to apply gamma correction to provide &#39;truer&#39; colors (default true).
-    strip.rainbow(firstPixelHue);
-    // Above line is equivalent to:
-    // strip.rainbow(firstPixelHue, 1, 255, 255, true);
-    strip.show(); // Update strip with new contents
-    delay(wait);  // Pause for a moment
-}
-}
-
-// Rainbow-enhanced theater marquee. Pass delay time (in ms) between frames.
-void theaterChaseRainbow(int wait) {
-int firstPixelHue = 0;     // First pixel starts at red (hue 0)
-for(int a=0; a&lt;30; a++) {  // Repeat 30 times...
-    for(int b=0; b&lt;3; b++) { //  &#39;b&#39; counts from 0 to 2...
-    strip.clear();         //   Set all pixels in RAM to 0 (off)
-    // &#39;c&#39; counts up from &#39;b&#39; to end of strip in increments of 3...
-    for(int c=b; c&lt;strip.numPixels(); c += 3) {
-        // hue of pixel &#39;c&#39; is offset by an amount to make one full
-        // revolution of the color wheel (range 65536) along the length
-        // of the strip (strip.numPixels() steps):
-        int      hue   = firstPixelHue + c * 65536L / strip.numPixels();
-        uint32_t color = strip.gamma32(strip.ColorHSV(hue)); // hue -&gt; RGB
-        strip.setPixelColor(c, color); // Set pixel &#39;c&#39; to value &#39;color&#39;
-    }
-    strip.show();                // Update strip with new contents
-    delay(wait);                 // Pause for a moment
-    firstPixelHue += 65536 / 90; // One cycle of color wheel over 90 frames
-    }
-}
-}
-</code></pre></div>
-</details>
-<details>
-<summary>Current code for Arduino, it&rsquo;s messy, I know</summary>
+<summary>Current code, they&rsquo;re messy, i know</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Main</label><label for="__tabbed_1_2">LED strip</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="cp">#define BUTTON_COUNT 10 </span><span class="c1">// number of buttons</span>
 <span class="cp">#define COMBOBREAKER_COUNT 2 </span><span class="c1">// number of buttons needed to be on to solve. THIS SHOULD BE  1 &lt; n &lt; BUTTON_COUNT</span>
 <span class="cp">#define LED_PIN 13</span>
@@ -1203,6 +1041,173 @@ for(int a=0; a&lt;30; a++) {  // Repeat 30 times...
 <span class="n">digitalWrite</span><span class="p">(</span><span class="n">EXT_LIGHT_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// A basic everyday NeoPixel strip test program.</span>
+
+<span class="c1">// NEOPIXEL BEST PRACTICES for most reliable operation:</span>
+<span class="c1">// - Add 1000 uF CAPACITOR between NeoPixel strip&#39;s + and - connections.</span>
+<span class="c1">// - MINIMIZE WIRING LENGTH between microcontroller board and first pixel.</span>
+<span class="c1">// - NeoPixel strip&#39;s DATA-IN should pass through a 300-500 OHM RESISTOR.</span>
+<span class="c1">// - AVOID connecting NeoPixels on a LIVE CIRCUIT. If you must, ALWAYS</span>
+<span class="c1">//   connect GROUND (-) first, then +, then data.</span>
+<span class="c1">// - When using a 3.3V microcontroller with a 5V-powered NeoPixel strip,</span>
+<span class="c1">//   a LOGIC-LEVEL CONVERTER on the data line is STRONGLY RECOMMENDED.</span>
+<span class="c1">// (Skipping these may work OK on your workbench but can fail in the field)</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_NeoPixel.h&gt;</span>
+<span class="cp">#ifdef __AVR__</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;avr/power.h&gt;</span><span class="c1"> // Required for 16 MHz Adafruit Trinket</span>
+<span class="cp">#endif</span>
+
+<span class="c1">// Which pin on the Arduino is connected to the NeoPixels?</span>
+<span class="c1">// On a Trinket or Gemma we suggest changing this to 1:</span>
+<span class="cp">#define LED_PIN    2</span>
+<span class="c1">// How many NeoPixels are attached to the Arduino?</span>
+<span class="cp">#define LED_COUNT 50</span>
+<span class="c1">// PIN to expect trigger</span>
+<span class="cp">#define TRIGGER_PIN 3</span>
+
+<span class="c1">// Declare our NeoPixel strip object:</span>
+<span class="n">Adafruit_NeoPixel</span><span class="w"> </span><span class="nf">strip</span><span class="p">(</span><span class="n">LED_COUNT</span><span class="p">,</span><span class="w"> </span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">NEO_GRB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">NEO_KHZ800</span><span class="p">);</span>
+<span class="c1">// Argument 1 = Number of pixels in NeoPixel strip</span>
+<span class="c1">// Argument 2 = Arduino pin number (most are valid)</span>
+<span class="c1">// Argument 3 = Pixel type flags, add together as needed:</span>
+<span class="c1">//   NEO_KHZ800  800 KHz bitstream (most NeoPixel products w/WS2812 LEDs)</span>
+<span class="c1">//   NEO_KHZ400  400 KHz (classic &#39;v1&#39; (not v2) FLORA pixels, WS2811 drivers)</span>
+<span class="c1">//   NEO_GRB     Pixels are wired for GRB bitstream (most NeoPixel products)</span>
+<span class="c1">//   NEO_RGB     Pixels are wired for RGB bitstream (v1 FLORA pixels, not v2)</span>
+<span class="c1">//   NEO_RGBW    Pixels are wired for RGBW bitstream (NeoPixel RGBW products)</span>
+
+
+<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">state</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">colorWipeRate</span><span class="p">;</span>
+
+<span class="c1">// setup() function -- runs once at startup --------------------------------</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="c1">// These lines are specifically to support the Adafruit Trinket 5V 16 MHz.</span>
+<span class="c1">// Any other board, you can remove this part (but no harm leaving it):</span>
+<span class="cp">#if defined(__AVR_ATtiny85__) &amp;&amp; (F_CPU == 16000000)</span>
+<span class="n">clock_prescale_set</span><span class="p">(</span><span class="n">clock_div_1</span><span class="p">);</span>
+<span class="cp">#endif</span>
+<span class="c1">// END of Trinket-specific code.</span>
+
+<span class="n">strip</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w">           </span><span class="c1">// INITIALIZE NeoPixel strip object (REQUIRED)</span>
+<span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span><span class="w">            </span><span class="c1">// Turn OFF all pixels ASAP</span>
+<span class="n">strip</span><span class="p">.</span><span class="n">setBrightness</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span><span class="w"> </span><span class="c1">// Set BRIGHTNESS to about 1/5 (max = 255)</span>
+
+<span class="n">pinMode</span><span class="p">(</span><span class="n">TRIGGER_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">);</span>
+<span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">colorWipeRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+<span class="c1">//attachInterrupt(digitalPinToInterrupt(TRIGGER_PIN),isr,RISING); // trigger ISR on rising edge of master voltage signal</span>
+<span class="p">}</span>
+
+
+<span class="c1">// loop() function -- runs repeatedly as long as board is on ---------------</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="c1">// Fill along the length of the strip in various colors...</span>
+<span class="w">    </span><span class="n">colorWipe</span><span class="p">(</span><span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">colorWipeRate</span><span class="p">);</span><span class="w"> </span><span class="c1">// Red</span>
+<span class="w">    </span><span class="n">colorWipe</span><span class="p">(</span><span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="w">  </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">colorWipeRate</span><span class="p">);</span><span class="w"> </span><span class="c1">// Green</span>
+<span class="w">    </span><span class="n">colorWipe</span><span class="p">(</span><span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="w">  </span><span class="mi">0</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">),</span><span class="w"> </span><span class="n">colorWipeRate</span><span class="p">);</span><span class="w"> </span><span class="c1">// Blue</span>
+
+<span class="w">    </span><span class="n">colorWipe</span><span class="p">(</span><span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">colorWipeRate</span><span class="p">);</span><span class="w"> </span><span class="c1">// Red</span>
+<span class="w">    </span><span class="n">colorWipe</span><span class="p">(</span><span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="w">  </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">colorWipeRate</span><span class="p">);</span><span class="w"> </span><span class="c1">// Green</span>
+<span class="w">    </span><span class="n">colorWipe</span><span class="p">(</span><span class="n">strip</span><span class="p">.</span><span class="n">Color</span><span class="p">(</span><span class="w">  </span><span class="mi">0</span><span class="p">,</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">),</span><span class="w"> </span><span class="n">colorWipeRate</span><span class="p">);</span><span class="w"> </span><span class="c1">// Blue</span>
+
+<span class="w">    </span><span class="n">colorWipeRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">colorWipeRate</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">colorWipeRate</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="n">colorWipeRate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">isr</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c1">// Some functions of our own for creating animated effects -----------------</span>
+
+<span class="c1">// Fill strip pixels one after another with a color. Strip is NOT cleared</span>
+<span class="c1">// first; anything there will be covered pixel by pixel. Pass in color</span>
+<span class="c1">// (as a single &#39;packed&#39; 32-bit value, which you can get by calling</span>
+<span class="c1">// strip.Color(red, green, blue) as shown in the loop() function above),</span>
+<span class="c1">// and a delay time (in milliseconds) between pixels.</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">colorWipe</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">wait</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">strip</span><span class="p">.</span><span class="n">numPixels</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// For each pixel in strip...</span>
+<span class="w">    </span><span class="c1">//if(digitalRead(TRIGGER_PIN) == 1) // if signal is 0, lights should turn on</span>
+<span class="w">    </span><span class="c1">//{</span>
+<span class="w">    </span><span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w">         </span><span class="c1">//  Set pixel&#39;s color (in RAM)</span>
+<span class="w">    </span><span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span><span class="w">                          </span><span class="c1">//  Update strip to match</span>
+<span class="w">    </span><span class="c1">//}</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="n">wait</span><span class="p">);</span><span class="w">                           </span><span class="c1">//  Pause for a moment </span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Theater-marquee-style chasing lights. Pass in a color (32-bit value,</span>
+<span class="c1">// a la strip.Color(r,g,b) as mentioned above), and a delay time (in ms)</span>
+<span class="c1">// between frames.</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">theaterChase</span><span class="p">(</span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">wait</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Repeat 10 times...</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//  &#39;b&#39; counts from 0 to 2...</span>
+<span class="w">    </span><span class="n">strip</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w">         </span><span class="c1">//   Set all pixels in RAM to 0 (off)</span>
+<span class="w">    </span><span class="c1">// &#39;c&#39; counts up from &#39;b&#39; to end of strip in steps of 3...</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="o">=</span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="o">&lt;</span><span class="n">strip</span><span class="p">.</span><span class="n">numPixels</span><span class="p">();</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// Set pixel &#39;c&#39; to value &#39;color&#39;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span><span class="w"> </span><span class="c1">// Update strip with new contents</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="n">wait</span><span class="p">);</span><span class="w">  </span><span class="c1">// Pause for a moment</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Rainbow cycle along whole strip. Pass delay time (in ms) between frames.</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">rainbow</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">wait</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="c1">// Hue of first pixel runs 5 complete loops through the color wheel.</span>
+<span class="c1">// Color wheel has a range of 65536 but it&#39;s OK if we roll over, so</span>
+<span class="c1">// just count from 0 to 5*65536. Adding 256 to firstPixelHue each time</span>
+<span class="c1">// means we&#39;ll make 5*65536/256 = 1280 passes through this loop:</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="n">firstPixelHue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">firstPixelHue</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="o">*</span><span class="mi">65536</span><span class="p">;</span><span class="w"> </span><span class="n">firstPixelHue</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">256</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// strip.rainbow() can take a single argument (first pixel hue) or</span>
+<span class="w">    </span><span class="c1">// optionally a few extras: number of rainbow repetitions (default 1),</span>
+<span class="w">    </span><span class="c1">// saturation and value (brightness) (both 0-255, similar to the</span>
+<span class="w">    </span><span class="c1">// ColorHSV() function, default 255), and a true/false flag for whether</span>
+<span class="w">    </span><span class="c1">// to apply gamma correction to provide &#39;truer&#39; colors (default true).</span>
+<span class="w">    </span><span class="n">strip</span><span class="p">.</span><span class="n">rainbow</span><span class="p">(</span><span class="n">firstPixelHue</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Above line is equivalent to:</span>
+<span class="w">    </span><span class="c1">// strip.rainbow(firstPixelHue, 1, 255, 255, true);</span>
+<span class="w">    </span><span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span><span class="w"> </span><span class="c1">// Update strip with new contents</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="n">wait</span><span class="p">);</span><span class="w">  </span><span class="c1">// Pause for a moment</span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Rainbow-enhanced theater marquee. Pass delay time (in ms) between frames.</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">theaterChaseRainbow</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">wait</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">firstPixelHue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">     </span><span class="c1">// First pixel starts at red (hue 0)</span>
+<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="o">&lt;</span><span class="mi">30</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Repeat 30 times...</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//  &#39;b&#39; counts from 0 to 2...</span>
+<span class="w">    </span><span class="n">strip</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w">         </span><span class="c1">//   Set all pixels in RAM to 0 (off)</span>
+<span class="w">    </span><span class="c1">// &#39;c&#39; counts up from &#39;b&#39; to end of strip in increments of 3...</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="o">=</span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="o">&lt;</span><span class="n">strip</span><span class="p">.</span><span class="n">numPixels</span><span class="p">();</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// hue of pixel &#39;c&#39; is offset by an amount to make one full</span>
+<span class="w">        </span><span class="c1">// revolution of the color wheel (range 65536) along the length</span>
+<span class="w">        </span><span class="c1">// of the strip (strip.numPixels() steps):</span>
+<span class="w">        </span><span class="kt">int</span><span class="w">      </span><span class="n">hue</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">firstPixelHue</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">65536L</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">strip</span><span class="p">.</span><span class="n">numPixels</span><span class="p">();</span>
+<span class="w">        </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strip</span><span class="p">.</span><span class="n">gamma32</span><span class="p">(</span><span class="n">strip</span><span class="p">.</span><span class="n">ColorHSV</span><span class="p">(</span><span class="n">hue</span><span class="p">));</span><span class="w"> </span><span class="c1">// hue -&gt; RGB</span>
+<span class="w">        </span><span class="n">strip</span><span class="p">.</span><span class="n">setPixelColor</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"> </span><span class="c1">// Set pixel &#39;c&#39; to value &#39;color&#39;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">strip</span><span class="p">.</span><span class="n">show</span><span class="p">();</span><span class="w">                </span><span class="c1">// Update strip with new contents</span>
+<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="n">wait</span><span class="p">);</span><span class="w">                 </span><span class="c1">// Pause for a moment</span>
+<span class="w">    </span><span class="n">firstPixelHue</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">65536</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">90</span><span class="p">;</span><span class="w"> </span><span class="c1">// One cycle of color wheel over 90 frames</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </details>
 
 
