@@ -141,7 +141,8 @@ markdown_extensions:
   - pymdownx.escapeall:
         hardbreak: true
   - attr_list
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+        alternate_style: true
   
 
 extra_css:
