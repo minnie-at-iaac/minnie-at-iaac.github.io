@@ -5,4 +5,6 @@ hide:
 
 # Documenting Design
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Most documentations I've done before are very objective as they needed to cater to the user or client. In contrast, what we need to do for this subject is to create one that is like a personal blog. There is a learning curve in setting up and "designing"/formatting the websites. I'm also not much of a writer, so it's gonna be challenging to write weekly reflections and content for this.
+
+I have previous experience with git and coding so I also made an [FAQ page](/term1/02-Documenting-design/Git-problems), hope it helps.
