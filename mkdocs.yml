@@ -24,6 +24,8 @@ nav:
         - Machine Paradox: term1/05-Machine-Paradox/Machine-Paradox.md
         - Forensic Report: term1/05-Machine-Paradox/Forensic-Report.md
         - Triggered: term1/05-Machine-Paradox/Triggered.md
+      - Notes:
+        - Books: term1/99-Notes/Readables.md
 #  - Term 2:
 #      - digi: default-page.md
 #      - studio: default-page.md
