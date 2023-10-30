@@ -105,13 +105,13 @@ The morning session was with Grayson and Drishya, their ideas were interesting! 
 ??? info "To-do"
 
     - [ ] plot my or others' past work in the D.S.
-        - [ ] Brakong
-        - [ ] UP FABLAB x HEED
-        - [ ] AA3 x Cloop
+        - [x] Brakong
+        - [x] UP FABLAB x HEED
+        - [X] AA3 x Cloop
         - [ ] UB GBC Project and CSR activities
         - [ ] protests
     - [ ] add references in the D.S.
-        - [ ] Precious plastics
+        - [X] Precious plastics
         - [ ] News article(s) on ocean plastics
         - [x] Greenpeace ph report on waste trade
         - [ ] Learnings from: Design as Learning  :open_book: 
