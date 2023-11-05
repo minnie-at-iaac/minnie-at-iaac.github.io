@@ -647,6 +647,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-undo-a-commit-already-pushed-in-github" class="md-nav__link">
+    How to undo a commit already pushed in Github
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -967,6 +974,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#how-to-undo-a-commit-already-pushed-in-github" class="md-nav__link">
+    How to undo a commit already pushed in Github
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1108,6 +1122,14 @@ then you can add a new line by using two spaces</p>
 <p>Add <strong>{:target=&rdquo;_blank&rdquo;}</strong> after the end parenthesis, for example:</p>
 <div class="highlight"><pre><span></span><code>Opens in a [new tab](https://hackmd.io/dD_c65SVSgqPHJwa56zHew &quot;hover text&quot;){:target=&quot;_blank&quot;}
 </code></pre></div>
+<h2 id="how-to-undo-a-commit-already-pushed-in-github">How to undo a commit already pushed in Github<a class="headerlink" href="#how-to-undo-a-commit-already-pushed-in-github" title="Permanent link">&para;</a></h2>
+<p>find the commit ID<br />
+<a class="glightbox" href="../../../images/Git%20Problems/github-commit-number.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../images/Git%20Problems/github-commit-number.gif" /></a><br />
+use the git revert command
+<div class="highlight"><pre><span></span><code>git revert &lt;commit ID&gt;
+</code></pre></div>
+commit the changes, if you are in Visual Studio, you can either click the commit button or type :qa in the terminal<br />
+<a class="glightbox" href="../../../images/Git%20Problems/commit-a-revert.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../images/Git%20Problems/commit-a-revert.png" /></a>  </p>
 <div class="admonition bug">
 <p class="admonition-title">if you find anything wrong or missing in this page</p>
 <p>send me a message! or email me at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#101;&#109;&#109;&#97;&#110;&#117;&#101;&#108;&#108;&#101;&#46;&#112;&#97;&#110;&#103;&#105;&#108;&#105;&#110;&#97;&#110;&#64;&#115;&#116;&#117;&#100;&#101;&#110;&#116;&#115;&#46;&#105;&#97;&#97;&#99;&#46;&#110;&#101;&#116;">&#101;&#109;&#109;&#97;&#110;&#117;&#101;&#108;&#108;&#101;&#46;&#112;&#97;&#110;&#103;&#105;&#108;&#105;&#110;&#97;&#110;&#64;&#115;&#116;&#117;&#100;&#101;&#110;&#116;&#115;&#46;&#105;&#97;&#97;&#99;&#46;&#110;&#101;&#116;</a></p>
