@@ -158,7 +158,17 @@ Add **{:target="_blank"}** after the end parenthesis, for example:
 
 ```
 Opens in a [new tab](https://hackmd.io/dD_c65SVSgqPHJwa56zHew "hover text"){:target="_blank"}
-```
+```  
 
+## How to undo a commit already pushed in Github
+find the commit ID  
+![](../../images/Git%20Problems/github-commit-number.gif)  
+use the git revert command
+```
+git revert <commit ID>
+```
+commit the changes, if you are in Visual Studio, you can either click the commit button or type :qa in the terminal  
+![](../../images/Git%20Problems/commit-a-revert.png)  
+  
 !!! bug "if you find anything wrong or missing in this page"
     send me a message! or email me at emmanuelle.pangilinan@students.iaac.net
