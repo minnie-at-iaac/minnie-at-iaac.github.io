@@ -18,7 +18,9 @@ nav:
       - Documenting Design: 
         - Documenting Design: term1/02-Documenting-design/Documenting-design.md
         - Git Problems: term1/02-Documenting-design/Git-problems.md
-      - Design Studio 01: term1/03-Design-studio/Design-studio-01.md
+      - Design Studio 01: 
+        - Design Studio: term1/03-Design-studio/Design-studio-01.md
+        - Intervention 01: term1/03-Design-studio/Intervention-01.md
       - Atlas of Weak Signals: term1/04-Atlas-of-weak-signals/Atlas of Weak Signals.md
       - Machine Paradox: 
         - Machine Paradox: term1/05-Machine-Paradox/Machine-Paradox.md
