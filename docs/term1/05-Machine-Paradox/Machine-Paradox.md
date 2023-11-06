@@ -1,5 +1,5 @@
 ---
-title: Machine Paradox
+title: Machine Paradox Reflection
 ---
 
 The seminar is divided into two parts. The first week, we had to take apart "broken" machines and make a forensic report and in the second week we had to create a new machine with working components from the broken machines.
@@ -19,9 +19,6 @@ For several days, the FABLAB team and instructors helped in figuring out the scr
 
 This is also the first time I used a Raspberry pi and I've always wanted one (but it is a bit expensive).
 
-### Wonders of the FABLAB
-I like that we have access to all these machines, tools and parts. Although we did use parts I brought from home like my arduino and some push buttons, the things in and the FABLAB spaces are super helpful. I could on only think of the Fablab/makerspaces/workshops back home, and how can we/I find a way to replicate this. Just imagine the all ideas that can emerge! 
-
 
 ## Rethink and Reconnect
 
@@ -32,12 +29,17 @@ Instead of using the amplifier board from the BOSE SoundDock, we used another am
 ### Concept
 We settled on the idea of anxiety, and how we can manifest it in a sort of game/toy.
 
-### Execution
+## Reflection
+
+### Wonders of the FABLAB
+I like that we have access to all these machines, tools and parts. Although we did use parts I brought from home like my arduino and some push buttons, the things in and the FABLAB spaces are super helpful. I could on only think of the Fablab/makerspaces/workshops back home, and how can we/I find a way to replicate this. Just imagine the all ideas that can emerge! 
+
+### Making our Machine
 We only had 3 days to make the machine, video and presentation. It was so exhausting and my brain is fried.
 
 Admittedly, having a Computer Science background, there was a bit of pressure (from myself) to make it all work incredibly well. It would have been nice to have all the components integrated, the code could have been more optimized and cleaner, the wiring and connections could have been more robust and stable. But it is what it is. Maybe I'll fix things when we showcase it in the exhibit that Chiara mentioned.
 
-## Latinos y Filipino
+### Latinos y Filipino
 
 Before we started, we had to group ourselves making sure that each group is composed of people with different skillsets (in project management, building, electronics). Our group is called {-- Minnie & --} Minnions //hahaha// with me, Ever, Vania, Jorge and Panchi. It was a great team effort with Panchi modelling the casing, Jorge making the sounds and soldering the wires, Ever making the buttons and finding parts we could use and Vania staying on top of things, while I programmed the arduino.  It was really fun working with them!! Happy and grateful <3
 

@@ -5,7 +5,7 @@ hide:
 
 # Poblenou
 
-We toured nearby spaces
+We toured nearby spaces in Poblenou:
 
 ## La Plataforma
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d748.2225791227191!2d2.1951087761444317!3d41.39818830171099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a317a60fc7af%3A0xf248ecff14c2fda8!2sLa%20Plataforma!5e0!3m2!1sen!2ses!4v1697368840261!5m2!1sen!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -29,4 +29,9 @@ We toured nearby spaces
 
 
 # ELISAVA
-Toured the workshop, print lab, photography studio, electronics lab and library! great stuff!
+We also went to ELISAVA and toured the workshop, print lab, photography studio, electronics lab and library! great stuff!  
+
+# Reflection
+Walking in the afternoon around Poblenou was definitely exhausting. It is so refreshing to see all these creative spaces and communities that are locally supported by the local government. I hope I can attend events in the future, my only worry is that I am still learning spanish.
+
+I don't read much but maybe now is the time to start. I have already borrowed three books from ELISAVA library!
