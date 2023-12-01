@@ -1,7 +1,18 @@
+## How to Embed your Teachable Model in gh-pages
+Teachable Machine is a web tool to make machinee learning models. Super cool. https://teachablemachine.withgoogle.com/  
+
+1. Download the model zip file and extract the files (model.json, metadata.json and weights.bin) to a folder in your repository, e.g. in files folder
+2. Copy and paste the embed javascript code to your page
+3. Replace the URL variable with the path of the extracted files
+4. If it is not loading, try adding this line of code before the embed code:
+``` html
+<meta http-equiv="Permissions-Policy" content="interest-cohort=(), user-id=()" />
+```
+
 <meta http-equiv="Permissions-Policy" content="interest-cohort=(), user-id=()" />
 
-<div>Teachable Machine Image Model</div>
-<button type="button" onclick="init()">Start</button>
+## Sample: Detecting if Minnie has glasses on
+<button type="button" onclick="init()">Click to start (opens your webcam)</button>
 <div id="webcam-container"></div>
 <div id="label-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
@@ -59,3 +70,8 @@
         }
     }
 </script>
+
+
+
+!!! note "It looks something like this"
+    ![](../../images/Extended-Intelligence/teaching-machine-output-sample.png){data-gallery="ei"}
