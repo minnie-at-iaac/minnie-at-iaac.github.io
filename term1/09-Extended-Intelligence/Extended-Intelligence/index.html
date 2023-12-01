@@ -95,6 +95,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#how-to-embed-your-teachable-model-in-gh-pages" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -730,6 +735,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Extended Intelligence
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -739,6 +755,41 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-embed-your-teachable-model-in-gh-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Embed your Teachable Model in gh-pages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-detecting-if-minnie-has-glasses-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample: Detecting if Minnie has glasses on
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -887,6 +938,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-embed-your-teachable-model-in-gh-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Embed your Teachable Model in gh-pages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-detecting-if-minnie-has-glasses-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample: Detecting if Minnie has glasses on
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -905,9 +982,19 @@
 
   <h1>Extended Intelligence</h1>
 
+<h2 id="how-to-embed-your-teachable-model-in-gh-pages">How to Embed your Teachable Model in gh-pages<a class="headerlink" href="#how-to-embed-your-teachable-model-in-gh-pages" title="Permanent link">&para;</a></h2>
+<p>Teachable Machine is a web tool to make machinee learning models. Super cool. <a href="https://teachablemachine.withgoogle.com/">https://teachablemachine.withgoogle.com/</a>  </p>
+<ol>
+<li>Download the model zip file and extract the files (model.json, metadata.json and weights.bin) to a folder in your repository, e.g. in files folder</li>
+<li>Copy and paste the embed javascript code to your page</li>
+<li>Replace the URL variable with the path of the extracted files</li>
+<li>If it is not loading, try adding this line of code before the embed code:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;Permissions-Policy&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;interest-cohort=(), user-id=()&quot;</span> <span class="p">/&gt;</span>
+</code></pre></div></li>
+</ol>
 <p><meta http-equiv="Permissions-Policy" content="interest-cohort=(), user-id=()" /></p>
-<div>Teachable Machine Image Model</div>
-<p><button type="button" onclick="init()">Start</button></p>
+<h2 id="sample-detecting-if-minnie-has-glasses-on">Sample: Detecting if Minnie has glasses on<a class="headerlink" href="#sample-detecting-if-minnie-has-glasses-on" title="Permanent link">&para;</a></h2>
+<p><button type="button" onclick="init()">Click to start (opens your webcam)</button></p>
 <div id="webcam-container"></div>
 <div id="label-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
@@ -965,6 +1052,11 @@
         }
     }
 </script>
+
+<div class="admonition note">
+<p class="admonition-title">It looks something like this</p>
+<p><a class="glightbox" href="../../../images/Extended-Intelligence/teaching-machine-output-sample.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom" data-gallery="ei"><img alt="" data-gallery="ei" src="../../../images/Extended-Intelligence/teaching-machine-output-sample.png" /></a></p>
+</div>
 
 
 
