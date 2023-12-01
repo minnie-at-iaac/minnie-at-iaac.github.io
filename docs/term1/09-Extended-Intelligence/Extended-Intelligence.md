@@ -74,4 +74,4 @@ Teachable Machine is a web tool to make machinee learning models. Super cool. ht
 
 
 !!! note "It looks something like this"
-    ![](../../images/Extended-Intelligence/teaching-machine-output-sample.png){data-gallery="ei"}
+    ![](../../images/Extended-Intelligence/teaching-machine-output-sample.gif){data-gallery="ei"}
