@@ -1,4 +1,15 @@
-## How to Embed your Teachable Model in gh-pages
+## Reflection 
+AI progress for me has been crazy fast yet not completely surprising. This seminar has reminded me of when I took a class on machine learning, maybe ten years ago, when there were just a few libraries and we had to code the algorithms. We made a simple classifier then, a face classifier I think, which we had to train for hours in our own machines with datasets that we made ourselves. Comparing the past experience with what we have done in just a few days, I'm amazed on how accessible it has gotten and how new creative ideas emerge from it.
+
+Despite this amusement, I still have mixed feelings about AI. What I find the most problematic is that the big AI's now, like OpenAI and Midjourney, have been trained on stolen data or data without (our) consent. Visual artists have already been affected by the generation of "content"/"art" that has been based on their previous work. It is unfair. 
+
+I don't entirely approve of and agree with the big AI's, but I admit that I use ChatGPT and some image generation AI's sometimes. I'm hesitant every time. The cognitive dissonance has has caused me quite a number of sleepless nights.
+
+Power is still in the hands of a few. It is crucial that we demand for transparency, accountability and democratization of tools and technology, especially AI. 
+
+
+
+### How to Embed your Teachable Model in gh-pages
 Teachable Machine is a web tool to make machinee learning models. Super cool. https://teachablemachine.withgoogle.com/  
 
 1. Download the model zip file and extract the files (model.json, metadata.json and weights.bin) to a folder in your repository, e.g. in files folder
