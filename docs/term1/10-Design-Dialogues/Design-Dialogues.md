@@ -19,6 +19,8 @@ For a week, I sent people from different Fablabs and makerspaces here in Barcelo
 ### el basuradar
 What if planet earth made a trash detection AI?
 
+![](../../images/Design-Dialogues/exhibit-space.png)
+
 ## Other Interventions
 ### Human to Machine | Machine to Machine
 
