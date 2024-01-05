@@ -169,6 +169,20 @@ git revert <commit ID>
 ```
 commit the changes, if you are in Visual Studio, you can either click the commit button or type :qa in the terminal  
 ![](../../images/Git%20Problems/commit-a-revert.png)  
+
+## How to add "last updated" date on your site pages
+1. on mkdocs.yml, under plugins, add:
+```
+- git-revision-date-localized
+```
+2. on main.yml, update the checkout version to v4, then add fetch-depth: 0. So your steps should look like this:
+```
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+```
+See [reference](https://github.com/timvink/mkdocs-git-revision-date-localized-plugin?tab=readme-ov-file)
   
 !!! bug "if you find anything wrong or missing in this page"
     send me a message! or email me at emmanuelle.pangilinan@students.iaac.net
