@@ -97,8 +97,7 @@ theme:
 
 plugins:
   - search
-  - git-revision-date-localized:
-      fallback_to_build_date: true
+  - git-revision-date-localized
   - glightbox:
        touchNavigation: true
        loop: true
