@@ -58,4 +58,4 @@ It means that the indigenous people are people who grow together (or people who 
 !!! alert "to be continued"
 
 ## Resources and References
-- https://www.theguardian.com/commentisfree/2022/aug/01/climate-crisis-burning-death-meat-recycle-environment
+ 1. https://www.theguardian.com/commentisfree/2022/aug/01/climate-crisis-burning-death-meat-recycle-environment
