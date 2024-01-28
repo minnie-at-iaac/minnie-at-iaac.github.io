@@ -27,6 +27,7 @@ Some of our reflections this day were:
 
 #### Day 04 Solar Punk'd
 We went Solar. The Fall Group headed to the beach and had conversations about the sun. We prepared questions and challenges that people could randomly pick. We figured it was a good way, a positive topic, to engage with others and bring up climate awareness, consciousness and hopefully, a little inspiration.
+![](../../images/Design-Climate-Emergency/fall-group-01.gif){width=100%}
 
 #### Sunset
 A beautiful way to cap off the seminar
