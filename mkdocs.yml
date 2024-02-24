@@ -36,10 +36,10 @@ nav:
         - term1/08-Design-with-others/Design-with-others.md
       - Extended Intelligences: term1/09-Extended-Intelligence/Extended-Intelligence.md
       - Design Dialogues: term1/10-Design-Dialogues/Design-Dialogues.md
-      - Extra:
-        - Git Problems: term1/02-Documenting-design/Git-problems.md
-        - Books: term1/99-Notes/Readables.md
-        - Dialogues Notes: term1/99-Notes/DD-Notes.md
+      #- Extra:
+      #  - Git Problems: term1/02-Documenting-design/Git-problems.md
+      #  - Books: term1/99-Notes/Readables.md
+      #  - Dialogues Notes: term1/99-Notes/DD-Notes.md
   - Term 2:
       - Design Studio: term2/00-Design-Studio/Design-Studio.md
       - Designing in a state of climate emergency: term2/01-Designing-Climate-Emergency/Day01.md
@@ -53,6 +53,10 @@ nav:
       - Measuring the World: term2/05-Measuring-the-world/Measuring-the-World.md
   - Master project:
       - Initial ideas: project/project.md
+  - Side Quests:
+    - Git Problems: term1/02-Documenting-design/Git-problems.md
+    - Books: term1/99-Notes/Readables.md
+    - Dialogues Notes: term1/99-Notes/DD-Notes.md
 
 
 extra:
@@ -86,8 +90,8 @@ theme:
     # See available fonts at https://fonts.google.com/
     text: Karla
     code: Inconsolata
-  logo: images/favicon.png
-  favicon: images/favicon.png
+  logo: images/logo_minnie.png
+  favicon: images/logo_minnie.png
   features:
     - instant
     - header.autohide
