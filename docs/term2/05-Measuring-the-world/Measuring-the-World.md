@@ -484,3 +484,9 @@ https://gitlab.com/fablabbcn-projects
 
 
 
+## Reflection
+The seminar was very engaging, as Jorge, Annna, Dudu, Dhrishya and I explored a lot of ideas (at least in the brainstorming phase). Time and technical skills held us back, but I think we still managed to be the geeks we wanted to be. It was a combination of questioning what it means to be connected, learning how to code specific arduino and python scripts to create our idea and the physical movement and gathering of data.
+
+For me, exploring abstract and more creative concepts with the use of data is interesting. However, as we move to more autonomous systems, I think it is important to handle data with more care. 
+
+With regards to my thesis, where I want to find ways  for climate action and climate justice, data is a powerful factor. I feel that many of those who are exploiting the planet and externalizing waste are actively keeping the truth, to keep the status quo. To explore alternative presents that combats this would be one of the areas I can further investigate. 
