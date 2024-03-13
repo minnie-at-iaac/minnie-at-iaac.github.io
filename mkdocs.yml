@@ -1,6 +1,6 @@
 # Replace the text below to customize your site
 site_name: minnie-at-iaac
-site_description: Master in Design for Emergent Futures 2023
+site_description: Master in Design for Emergent Futures 2023-24
 site_author: Emmanuelle Pangilinan
 copyright: Copyright 2023 Minnie/Emmanuelle Pangilinan
 repo_name: 'minnie-at-iaac.github.io'
@@ -51,6 +51,7 @@ nav:
         - Module 01: term2/04-Digital-Prototyping/Module-01.md
         - Microchallenge 01: term2/04-Digital-Prototyping/Microchallenge-01.md
       - Measuring the World: term2/05-Measuring-the-world/Measuring-the-World.md
+      - Designing with Extended Intelligences: term2/07-Extended-Intelligences/Extended-Intelligences.md
   - Master project:
       - Initial ideas: project/project.md
   - Side Quests:
