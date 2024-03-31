@@ -998,49 +998,49 @@
   
 
 
-<h1 id="u-git-a-problem">u .git a problem?<a class="headerlink" href="#u-git-a-problem" title="Permanent link">&para;</a></h1>
+<div><h1 id="u-git-a-problem">u .git a problem?<a class="headerlink" href="#u-git-a-problem" title="Permanent link">¶</a></h1>
 <div class="admonition info">
-<p class="admonition-title">let&rsquo;s try to fix that</p>
-<p>here i&rsquo;ll document the issues that i&rsquo;ve encountered in setting up this website<br />
+<p class="admonition-title">let’s try to fix that</p>
+<p>here i’ll document the issues that i’ve encountered in setting up this website<br>
 this covers git, mkdocs, mkdocs-material, html, etc.</p>
 </div>
-<h2 id="first-things-first-git-status">First things first, git status<a class="headerlink" href="#first-things-first-git-status" title="Permanent link">&para;</a></h2>
+<h2 id="first-things-first-git-status">First things first, git status<a class="headerlink" href="#first-things-first-git-status" title="Permanent link">¶</a></h2>
 <p>if you get this error
-<div class="highlight"><pre><span></span><code>fatal: not a git repository (or any of the parent directories): .git
-</code></pre></div></p>
-<p>This means that you have not created or cloned a repository properly, or not inside the correct folder.<br />
-Check the file explorer and look for the correct folder, we call this your &ldquo;root&rdquo; folder &ndash; this is the topmost folder of the local copy of your repository &ndash;</p>
-<h2 id="git-not-found">git not found<a class="headerlink" href="#git-not-found" title="Permanent link">&para;</a></h2>
-<p>if you try any command (e.g. &lsquo;git status&rsquo;) and get this error
-<div class="highlight"><pre><span></span><code>git : The term &#39;git&#39; is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was 
+</p><div class="highlight"><pre><span></span><code>fatal: not a git repository (or any of the parent directories): .git
+</code></pre></div>
+<p>This means that you have not created or cloned a repository properly, or not inside the correct folder.<br>
+Check the file explorer and look for the correct folder, we call this your “root” folder – this is the topmost folder of the local copy of your repository –</p>
+<h2 id="git-not-found">git not found<a class="headerlink" href="#git-not-found" title="Permanent link">¶</a></h2>
+<p>if you try any command (e.g. ‘git status’) and get this error
+</p><div class="highlight"><pre><span></span><code>git : The term 'git' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was 
 included, verify that the path is correct and try again.
 At line:1 char:1
 </code></pre></div>
-The easiest solution is to re-install git. </p>
-<h2 id="git-cheat-sheet">git Cheat Sheet<a class="headerlink" href="#git-cheat-sheet" title="Permanent link">&para;</a></h2>
-<p>These are the commands you need first  <br />
+The easiest solution is to re-install git. 
+<h2 id="git-cheat-sheet">git Cheat Sheet<a class="headerlink" href="#git-cheat-sheet" title="Permanent link">¶</a></h2>
+<p>These are the commands you need first  <br>
 For setting up:
-<div class="highlight"><pre><span></span><code>git init
+</p><div class="highlight"><pre><span></span><code>git init
 git clone
-</code></pre></div></p>
+</code></pre></div>
 <p>And for making updates:
-<div class="highlight"><pre><span></span><code>git pull
+</p><div class="highlight"><pre><span></span><code>git pull
 git add .
-git commit -m &quot;i will describe my changes in this commit message&quot;
+git commit -m "i will describe my changes in this commit message"
 git push
-</code></pre></div></p>
-<p>Here&rsquo;s a handy pdf i found</p>
+</code></pre></div>
+<p>Here’s a handy pdf i found</p>
 <iframe width="100%" height="800" src="https://education.github.com/git-cheat-sheet-education.pdf"></iframe>
 
-<h2 id="-version-and-help-are-your-friends">--version and --help are your friends<a class="headerlink" href="#-version-and-help-are-your-friends" title="Permanent link">&para;</a></h2>
+<h2 id="-version-and-help-are-your-friends">--version and --help are your friends<a class="headerlink" href="#-version-and-help-are-your-friends" title="Permanent link">¶</a></h2>
 <p>Entering any command then space then --version will verify that you have the command installed</p>
-<p><div class="highlight"><pre><span></span><code>C:\Users\Minnie&gt;gi --version
-&#39;gi&#39; is not recognized as an internal or external command,
+<p></p><div class="highlight"><pre><span></span><code>C:\Users\Minnie&gt;gi --version
+'gi' is not recognized as an internal or external command,
 operable program or batch file.
 </code></pre></div>
-you may have just mistyped it  </p>
-<p>Command then space then &ndash;help will show you the subcommands and parameters you can put with the command.
-<div class="highlight"><pre><span></span><code>C:\Users\Minnie&gt;mkdocs --help
+you may have just mistyped it  
+<p>Command then space then –help will show you the subcommands and parameters you can put with the command.
+</p><div class="highlight"><pre><span></span><code>C:\Users\Minnie&gt;mkdocs --help
 Usage: mkdocs [OPTIONS] COMMAND [ARGS]...
 
   MkDocs - Project documentation with Markdown.
@@ -1058,13 +1058,13 @@ Commands:
   gh-deploy  Deploy your documentation to GitHub Pages
   new        Create a new MkDocs project
   serve      Run the builtin development server
-</code></pre></div></p>
-<h2 id="my-page-is-up-but-it-looks-bad">My page is up but it looks bad<a class="headerlink" href="#my-page-is-up-but-it-looks-bad" title="Permanent link">&para;</a></h2>
-<p>Probably the .html, .css, and .js files are not generated correctly<br />
-1. check if the github actions ran successfully<br />
-<a class="glightbox" href="../../../images/Git%20Problems/check-github-actions.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../images/Git%20Problems/check-github-actions.gif" /></a>
-2. check the filenames in the mkdocs.yml, all the .md files you put under <strong>nav</strong> should exist<br />
-<div class="highlight"><pre><span></span><code>nav:
+</code></pre></div>
+<h2 id="my-page-is-up-but-it-looks-bad">My page is up but it looks bad<a class="headerlink" href="#my-page-is-up-but-it-looks-bad" title="Permanent link">¶</a></h2>
+<p>Probably the .html, .css, and .js files are not generated correctly<br>
+1. check if the github actions ran successfully<br>
+<a class="glightbox" href="../../../images/Git%20Problems/check-github-actions.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../images/Git%20Problems/check-github-actions.gif"></a>
+2. check the filenames in the mkdocs.yml, all the .md files you put under <strong>nav</strong> should exist<br>
+</p><div class="highlight"><pre><span></span><code>nav:
   - About: about/me.md
   - Term 1:
       - Landing Week: 
@@ -1081,55 +1081,55 @@ Commands:
 #      - studio: default-page.md
   - Master project:
       - Initial ideas: project/project.md
-</code></pre></div></p>
-<h2 id="i-want-to-put-my-navigation-at-the-top">I want to put my navigation at the top<a class="headerlink" href="#i-want-to-put-my-navigation-at-the-top" title="Permanent link">&para;</a></h2>
+</code></pre></div>
+<h2 id="i-want-to-put-my-navigation-at-the-top">I want to put my navigation at the top<a class="headerlink" href="#i-want-to-put-my-navigation-at-the-top" title="Permanent link">¶</a></h2>
 <p>In the mkdocs.yml file, <strong>navigation.tabs</strong> should be under theme and features:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">features</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">navigation.tabs</span>
 </code></pre></div>
-<p>Next, you need to have <strong>mkdocs-material</strong> at least version 9.0 (i&rsquo;m not sure, so it&rsquo;s best to get the latest one)
+<p>Next, you need to have <strong>mkdocs-material</strong> at least version 9.0 (i’m not sure, so it’s best to get the latest one)
 so you have to update your <strong>requirements.txt</strong> like this to get the latest version:</p>
 <div class="highlight"><pre><span></span><code>mkdocs~=1.5,&gt;=1.5.3
 <span class="hll">mkdocs-material&gt;1.0.0
 </span>mkdocs-material-extensions~=1.2
 </code></pre></div>
 <p>More about navigation here: <a href="https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs" title="mkdocs-material reference">mkdocs-material reference</a></p>
-<h2 id="how-to-embed-a-pdf">How to embed a .pdf<a class="headerlink" href="#how-to-embed-a-pdf" title="Permanent link">&para;</a></h2>
+<h2 id="how-to-embed-a-pdf">How to embed a .pdf<a class="headerlink" href="#how-to-embed-a-pdf" title="Permanent link">¶</a></h2>
 <p>in any part of a markdown file (a file in .md), we can insert html code  </p>
 <p>the cheat sheet above looks like this in my code:
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;100%&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://education.github.com/git-cheat-sheet-education.pdf&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-</code></pre></div></p>
-<h2 id="how-to-add-a-new-line">How to add a new line<a class="headerlink" href="#how-to-add-a-new-line" title="Permanent link">&para;</a></h2>
+</p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span> <span class="na">height</span><span class="o">=</span><span class="s">"800"</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://education.github.com/git-cheat-sheet-education.pdf"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="how-to-add-a-new-line">How to add a new line<a class="headerlink" href="#how-to-add-a-new-line" title="Permanent link">¶</a></h2>
 <p>with html:
-<div class="highlight"><pre><span></span><code>&lt;br&gt;
-</code></pre></div></p>
+</p><div class="highlight"><pre><span></span><code>&lt;br&gt;
+</code></pre></div>
 <p>or add this to mkdocs.yml, under the <strong>markdown_extensions:</strong></p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">markdown_extensions</span><span class="p">:</span>
+<p></p><div class="highlight"><pre><span></span><code><span class="nt">markdown_extensions</span><span class="p">:</span>
 <span class="hll"><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.escapeall</span><span class="p">:</span>
 </span><span class="hll"><span class="w">        </span><span class="nt">hardbreak</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </span></code></pre></div>
-then you can add a new line by using two spaces</p>
-<h2 id="how-to-center-an-image">How to center an image<a class="headerlink" href="#how-to-center-an-image" title="Permanent link">&para;</a></h2>
+then you can add a new line by using two spaces
+<h2 id="how-to-center-an-image">How to center an image<a class="headerlink" href="#how-to-center-an-image" title="Permanent link">¶</a></h2>
 <p>insert this html snippet in your .md file, just change the image path, width and caption:
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">figure</span> <span class="na">markdown</span><span class="p">&gt;</span>
-  ![](../images/minniecrop.jpg){ width=&quot;300&quot; }
+</p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">figure</span> <span class="na">markdown</span><span class="p">&gt;</span>
+  ![](../images/minniecrop.jpg){ width="300" }
   <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>ahh boba tea<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
-</code></pre></div></p>
-<h2 id="how-to-add-a-link-that-opens-in-a-new-tab">How to add a link that opens in a new tab<a class="headerlink" href="#how-to-add-a-link-that-opens-in-a-new-tab" title="Permanent link">&para;</a></h2>
-<p>Add <strong>{:target=&rdquo;_blank&rdquo;}</strong> after the end parenthesis, for example:</p>
-<div class="highlight"><pre><span></span><code>Opens in a [new tab](https://hackmd.io/dD_c65SVSgqPHJwa56zHew &quot;hover text&quot;){:target=&quot;_blank&quot;}
 </code></pre></div>
-<h2 id="how-to-undo-a-commit-already-pushed-in-github">How to undo a commit already pushed in Github<a class="headerlink" href="#how-to-undo-a-commit-already-pushed-in-github" title="Permanent link">&para;</a></h2>
-<p>find the commit ID<br />
-<a class="glightbox" href="../../../images/Git%20Problems/github-commit-number.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../images/Git%20Problems/github-commit-number.gif" /></a><br />
+<h2 id="how-to-add-a-link-that-opens-in-a-new-tab">How to add a link that opens in a new tab<a class="headerlink" href="#how-to-add-a-link-that-opens-in-a-new-tab" title="Permanent link">¶</a></h2>
+<p>Add <strong>{:target=”_blank”}</strong> after the end parenthesis, for example:</p>
+<div class="highlight"><pre><span></span><code>Opens in a [new tab](https://hackmd.io/dD_c65SVSgqPHJwa56zHew "hover text"){:target="_blank"}
+</code></pre></div>
+<h2 id="how-to-undo-a-commit-already-pushed-in-github">How to undo a commit already pushed in Github<a class="headerlink" href="#how-to-undo-a-commit-already-pushed-in-github" title="Permanent link">¶</a></h2>
+<p>find the commit ID<br>
+<a class="glightbox" href="../../../images/Git%20Problems/github-commit-number.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../images/Git%20Problems/github-commit-number.gif"></a><br>
 use the git revert command
-<div class="highlight"><pre><span></span><code>git revert &lt;commit ID&gt;
+</p><div class="highlight"><pre><span></span><code>git revert &lt;commit ID&gt;
 </code></pre></div>
-commit the changes, if you are in Visual Studio, you can either click the commit button or type :qa in the terminal<br />
-<a class="glightbox" href="../../../images/Git%20Problems/commit-a-revert.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../images/Git%20Problems/commit-a-revert.png" /></a>  </p>
-<h2 id="how-to-add-last-updated-date-on-your-site-pages">How to add &ldquo;last updated&rdquo; date on your site pages<a class="headerlink" href="#how-to-add-last-updated-date-on-your-site-pages" title="Permanent link">&para;</a></h2>
+commit the changes, if you are in Visual Studio, you can either click the commit button or type :qa in the terminal<br>
+<a class="glightbox" href="../../../images/Git%20Problems/commit-a-revert.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="" src="../../../images/Git%20Problems/commit-a-revert.png"></a>  
+<h2 id="how-to-add-last-updated-date-on-your-site-pages">How to add “last updated” date on your site pages<a class="headerlink" href="#how-to-add-last-updated-date-on-your-site-pages" title="Permanent link">¶</a></h2>
 <ol>
 <li>on mkdocs.yml, under plugins, add:
 <div class="highlight"><pre><span></span><code>- git-revision-date-localized
@@ -1144,8 +1144,8 @@ See <a href="https://github.com/timvink/mkdocs-git-revision-date-localized-plugi
 </ol>
 <div class="admonition bug">
 <p class="admonition-title">if you find anything wrong or missing in this page</p>
-<p>send me a message! or email me at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#101;&#109;&#109;&#97;&#110;&#117;&#101;&#108;&#108;&#101;&#46;&#112;&#97;&#110;&#103;&#105;&#108;&#105;&#110;&#97;&#110;&#64;&#115;&#116;&#117;&#100;&#101;&#110;&#116;&#115;&#46;&#105;&#97;&#97;&#99;&#46;&#110;&#101;&#116;">&#101;&#109;&#109;&#97;&#110;&#117;&#101;&#108;&#108;&#101;&#46;&#112;&#97;&#110;&#103;&#105;&#108;&#105;&#110;&#97;&#110;&#64;&#115;&#116;&#117;&#100;&#101;&#110;&#116;&#115;&#46;&#105;&#97;&#97;&#99;&#46;&#110;&#101;&#116;</a></p>
-</div>
+<p>send me a message! or email me at <a href="mailto:emmanuelle.pangilinan@students.iaac.net">emmanuelle.pangilinan@students.iaac.net</a></p>
+</div></div>
 
 
 
