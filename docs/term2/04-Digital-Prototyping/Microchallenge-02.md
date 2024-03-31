@@ -1,6 +1,6 @@
 ![hero](https://hackmd.io/_uploads/S1wv4qd66.jpg)
 # Kinetic Trash: A Trial and Error
-From our [hackMD documentation](https://hackmd.io/pQZeLblPSsyZPA83meSD_A?view)
+From our [hackMD documentation](https://hackmd.io/pQZeLblPSsyZPA83meSD_A?view). A copy is also on [this Github repo](https://github.com/kotsengkuba/mdef-microchallenge-2)
 
 ## Concept
 To create a dynamic installation representing oceanic trash by using a moving surface composed of waste materials
