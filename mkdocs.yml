@@ -41,7 +41,9 @@ nav:
       #  - Books: term1/99-Notes/Readables.md
       #  - Dialogues Notes: term1/99-Notes/DD-Notes.md
   - Term 2:
-      - Design Studio: term2/00-Design-Studio/Design-Studio.md
+      - Design Studio: 
+        - Interventions: term2/00-Design-Studio/Design-Studio.md
+        - Term 2 Video: term2/00-Design-Studio/Term-2-Video.md
       - Designing in a state of climate emergency: term2/01-Designing-Climate-Emergency/Day01.md
       - Communicating Ideas:
         - Communicating Ideas: term2/02-Communicating-Ideas/Communicating-Ideas.md
