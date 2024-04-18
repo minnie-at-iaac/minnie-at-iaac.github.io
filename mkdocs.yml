@@ -9,7 +9,7 @@ repo_url: 'https://github.com/minnie-at-iaac/minnie-at-iaac.github.io'
 
 
 nav:
-  - Master project: project/overview.md
+  - Master Project: project/overview.md
   - Term 1:
       - Landing Week: 
         - Landing Week: term1/01-Landing-week/Landing.md
@@ -58,6 +58,7 @@ nav:
         - Microchallenge 02: term2/04-Digital-Prototyping/Microchallenge-02.md
       - Measuring the World: term2/05-Measuring-the-world/Measuring-the-World.md
       - Designing with Extended Intelligences: term2/07-Extended-Intelligences/Extended-Intelligences.md
+      - Research Trip: term2/08-Research-Trip/Research-Trip.md
   - Side Quests:
     - Git Problems: term1/02-Documenting-design/Git-problems.md
     - Books: term1/99-Notes/Readables.md
@@ -108,9 +109,9 @@ theme:
     - navigation.prune
     - navigation.expand
     - navigation.tabs
-    - navigation.tabs.sticky
+    #- navigation.tabs.sticky
     - navigation.top
-    - navigation.tracking
+    #- navigation.tracking
 
 plugins:
   - search
