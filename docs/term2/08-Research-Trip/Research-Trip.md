@@ -9,22 +9,20 @@ The availability of various tools for seeing and sensing: magnifiers, microphone
 
 ## Snow is real!!!
 
-To experience snow for the FIRST TIME is a core memory. Enjoy this video
-[video]
+![](../../images/Research-trip/snow_01.jpg)
+
+To experience snow for the FIRST TIME is a core memory. Enjoy this video  
+[video link]
 
 ## Jams
+![](../../images/Research-trip/jamsesh_02.png.jpg)
 
 A jam is a creative collaboration, more common in creating music, but for me the collaboration can be in any medium, with the emphasis on improvisation and freedom. The research trip is full of jams: in our food, music and activities together. 
 
 Our food was super, hands-down impressed with all the meals (we should publish a recipe book!).
 
 ## Playing with Pixels
-
-[video]
-
-For my project, I wanted to tackle the transitions and interactions in between the real and virtual (physical and digital). I took inspiration from snow, our jam sessions and nature. Playing with Pixels is an app that displays a live video stream, from the webcam or wirelessly from a smartphone, and produces sounds, as a MIDI controller, based on how “green” the video is. The idea was to play with the camera, to explore and find nature (very simplistically represented as the green of the RGB value), so that it creates melodic sounds. These melodic sounds were tuned in the same musical scale as my kalimba, creating another opportunity to jam.
-
-As I was coding the app and playing around with the visualization, I accidentally made it like snow was slowly building on each video frame. I kept this cool❄️ effect.
+For my project, I wanted to tackle the transitions and interactions in between the real and virtual (physical and digital). I took inspiration from snow, our jam sessions and nature. More details [here]()
 
 As a change, I didn't make a trash-based project in this trip. Although I wanted to, there were a lot of stimuli that inspired me to do something else. This led me to a renewed interest in sound-making, which I might now incorporate in my final MDEF project.
 

@@ -58,7 +58,9 @@ nav:
         - Microchallenge 02: term2/04-Digital-Prototyping/Microchallenge-02.md
       - Measuring the World: term2/05-Measuring-the-world/Measuring-the-World.md
       - Designing with Extended Intelligences: term2/07-Extended-Intelligences/Extended-Intelligences.md
-      - Research Trip: term2/08-Research-Trip/Research-Trip.md
+      - Research Trip: 
+        - Reflections: term2/08-Research-Trip/Research-Trip.md
+        - Playing with Pixels: term2/08-Research-Trip/Playing-with-Pixels.md
   - Side Quests:
     - Git Problems: term1/02-Documenting-design/Git-problems.md
     - Books: term1/99-Notes/Readables.md
