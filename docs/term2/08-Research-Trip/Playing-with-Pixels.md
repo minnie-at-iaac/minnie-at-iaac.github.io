@@ -6,5 +6,12 @@ Taking inspiration from snow, our jam sessions, nature and the interactions betw
 
 As I was coding the app and playing around with the visualization, I accidentally made it like snow was slowly building on each video frame. What a cool❄️ coincidence so I kept this effect.
 
+![](../../images/Research-trip/pxls_03.png)
 ![](../../images/Research-trip/pxls.png)
+![](../../images/Research-trip/pxls_02.png)
+![](../../images/Research-trip/pxls_04.png)
+
 [video]
+
+The code is now up [on github](https://github.com/kotsengkuba/PixelPlayProcessing). 
+Software requirements include: Processing, Camo, loopMIDI, Ableton. Technical documentation for the code is ongoing.

@@ -1,5 +1,12 @@
+---
+hide:
+    - toc
+---
+
 ![](../../images/Research-trip/hike_scene.jpg)
 ## Sensing and Picking, Plants and Pottery
+
+![](../../images/Research-trip/sensing_02.png)
 
 Situated in this new context, at the border of Spain and France, in between winter and spring, just finishing our Design Dialogues before moving on to the last term, our Research Trip to Angoustrine proved to be a truly tantalizing experience.
 
