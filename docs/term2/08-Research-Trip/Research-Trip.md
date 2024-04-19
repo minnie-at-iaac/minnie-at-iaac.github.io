@@ -29,7 +29,7 @@ A jam is a creative collaboration, more common in creating music, but for me the
 Our food was super, hands-down impressed with all the meals (we should publish a recipe book!).
 
 ## Playing with Pixels
-For my project, I wanted to tackle the transitions and interactions in between the real and virtual (physical and digital). I took inspiration from snow, our jam sessions and nature. More details [here]()
+For my project, I wanted to tackle the transitions and interactions in between the real and virtual (physical and digital). I took inspiration from snow, our jam sessions and nature. More details [here](../Playing-with-Pixels)
 
 As a change, I didn't make a trash-based project in this trip. Although I wanted to, there were a lot of stimuli that inspired me to do something else. This led me to a renewed interest in sound-making, which I might now incorporate in my final MDEF project.
 
