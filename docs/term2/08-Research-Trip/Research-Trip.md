@@ -19,7 +19,7 @@ The availability of various tools for seeing and sensing: magnifiers, microphone
 ![](../../images/Research-trip/snow_01.jpg)
 
 To experience snow for the FIRST TIME is a core memory. Enjoy this video  
-[video link]
+<iframe height="640" src="https://youtube.com/embed/6PNa-XCrBzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" style="display: block; margin: 0 auto"></iframe>
 
 ## Jams
 ![](../../images/Research-trip/jamsesh_02.png.jpg)
