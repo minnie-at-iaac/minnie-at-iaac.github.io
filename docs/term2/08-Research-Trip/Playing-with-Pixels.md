@@ -11,7 +11,8 @@ As I was coding the app and playing around with the visualization, I accidentall
 ![](../../images/Research-trip/pxls_02.png)
 ![](../../images/Research-trip/pxls_04.png)
 
-[video]
+This is me playing with the sounds live.
+<iframe height="640" src="https://youtube.com/embed/8OAHJOXsLus?si=8d68Kuu-ieFcbv2h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" style="display: block; margin: 0 auto"></iframe>
 
 The code is now up [on github](https://github.com/kotsengkuba/PixelPlayProcessing). 
 Software requirements include: Processing, Camo, loopMIDI, Ableton. Technical documentation for the code is ongoing.
