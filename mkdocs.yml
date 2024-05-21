@@ -9,7 +9,7 @@ repo_url: 'https://github.com/minnie-at-iaac/minnie-at-iaac.github.io'
 
 
 nav:
-  - Master Project: project/overview.md
+  - Master Project: project/home.md
   - Term 1:
       - Landing Week: 
         - Landing Week: term1/01-Landing-week/Landing.md
