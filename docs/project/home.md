@@ -4,7 +4,7 @@ hide:
     #- toc
 ---
 
-# **UNTRASH: being in-between trash, sounds and community**
+# **UNTRASHING: being in-between trash, sounds and community**
 (working title)
 
 ![](../images/Thesis/circuits_no_tirar.jpg)
@@ -23,15 +23,15 @@ Guided by the somber echoes of "kapwa" – a Filipino term for our interconnecte
 
 ## What we've been doing
 <iframe width="100%" height="480" src="https://www.youtube.com/embed/_T0I4GzAluw?si=3Mqcpun0HOukHd40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-Making the Low-Tech Sequencer v1
-
+Making the Low-Tech Sequencer v1  
+<br>
 
 <iframe width="100%" height="480" src="https://www.youtube.com/embed/fB8wcn-utz0?si=s1FUowRzbG1M7V4n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-Looking back on Term 2
-
+Looking back on Term 2  
+<br>
 
 <iframe width="100%" height="480" src="https://www.youtube.com/embed/4bKsXcgrkUM?si=GaMWHiHI86T21h8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-Together with Nicolo and Ana, we go on adventures in circuit-bending and sound communities. Video by Nicolo.
+Together with Nicolo and Ana, we go on adventures in circuit-bending and sound communities. Video by Nicolo.  
 
 ## Social Media
 
