@@ -54,6 +54,7 @@ nav:
       - Fair Future(s): term2/06-Fair-Futures/Fair-Futures.md
       - Digital Prototyping:
         - Module 01: term2/04-Digital-Prototyping/Module-01.md
+        - Module 02: term2/04-Digital-Prototyping/Module-02.md
         - Microchallenge 01: term2/04-Digital-Prototyping/Microchallenge-01.md
         - Microchallenge 02: term2/04-Digital-Prototyping/Microchallenge-02.md
       - Measuring the World: term2/05-Measuring-the-world/Measuring-the-World.md
@@ -66,6 +67,10 @@ nav:
       - Communicating Ideas: /
       - Future Talks: /
       - Design Ethics: term3/04-Design-Ethics/Design-Ethics.md
+      - Digital Prototyping:
+        - Module 03: term3/05-Digital-Prototyping/Module-03.md
+        - Module 04 and 05: term3/05-Digital-Prototyping/Module-04-05.md
+        - Microchallenge 03: term3/05-Digital-Prototyping/Microchallenge-03.md
   - Side Quests:
     - Git Problems: term1/02-Documenting-design/Git-problems.md
     - Books: term1/99-Notes/Readables.md
