@@ -18,4 +18,4 @@ The python script receives the tcp messages and triggers the thermal printer to 
 
 I was really motivated to create this because I like learning how to work with audio and sound and how can we make interfaces that connects with the real world with tangible objects. It was also interesting to see it work with the entire Jaleo project.
 
-![](../../images/Thermal-printer/thermal_2.jpg)
+![](../../images/Thermal-printer/thermal_3.jpg)

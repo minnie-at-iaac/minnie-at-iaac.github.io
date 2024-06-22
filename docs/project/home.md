@@ -22,8 +22,10 @@ Guided by the somber echoes of "kapwa" – a Filipino term for our interconnecte
 ![](../images/Thesis/trash.jpg)
 
 ## What we've been doing
-<iframe width="100%" height="480" src="https://www.youtube.com/embed/_T0I4GzAluw?si=3Mqcpun0HOukHd40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-Making the Low-Tech Sequencer v1  
+<iframe width="50%" height="480" src="https://www.youtube.com/embed/_T0I4GzAluw?si=3Mqcpun0HOukHd40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe src="https://player.vimeo.com/video/955438211?h=c3a722aa14&color=f1d416&title=0&byline=0&portrait=0" width="50%" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/955438211">Pure Gold Upcycable No. 057</a> from <a href="https://vimeo.com/ifapuregold">ifa Pure Gold</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 <br>
 
 <iframe width="100%" height="480" src="https://www.youtube.com/embed/fB8wcn-utz0?si=s1FUowRzbG1M7V4n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -40,6 +42,18 @@ La Banda del Patio is a three-person group we formed in the MDEF program. We ref
 Thus, Jaleo was conceived, our final masters project and our debut public performance as a collective. Jaloe is composed of sound-making instruments that we built from second-hand flea-market objects, discarded items and ubiquitous materials. We find and create sounds in a non-linear way, in randomness and coincidence. It was all a tricky balance of taking risk while taking care. It was also lots of learning by experience, in discovering, breaking and fixing. Not to mention the explosions and smoke, we are grateful to still be injury-free.
 
 Jaleo in Spanish can mean different things, it can mean “fuss” - as Ricky Martin’s song - or it can pertain to a type of Flamenco music. Jaleo is also reminiscent of the Tagalog word *halo* which means “mix”. For me, it encapsulates the an aspect of the project related to mixing and remixing, in the physical materiality of the objects we tinker with and of the individual ideas each of us has. 
+
+## Jaleo Manifesto
+<< We are living in-between as being a presence in the present: staying in between is a process of Transform-Action, a dynamic happening of alchemy.
+It's oscillating across dichotomies to find rebirth, the rebirth of meaning, experiencing, feeling.
+
+The Transform-Action itself is a process of rebirthing.
+
+The presence in the present is a gathering space to feel safe and take care (of), where choosing and imperfections are allowed because it is ever-changing. It’s a humble and hopeful belief that this space can grow exactly here in symbiosis.
+
+Being in-between does not mean to find a margin and choose a point on this line, but moving freely in a grey area not clearly defined. It's not only guided by knowledge and rationality, but also by instinct, feel and sense.
+
+The starting point to reach this grey area is material, tangible, but at the same time ready to be reconsidered through virtuality. >>
 
 ### Punk Enough
 
