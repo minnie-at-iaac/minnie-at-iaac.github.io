@@ -4,7 +4,7 @@ hide:
   - navigation
   - toc
 ---
-
+# About
 <figure markdown>
   ![](../images/minniecrop.jpg){ width="300" }
   <figcaption>ahh boba tea</figcaption>
