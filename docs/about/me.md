@@ -1,9 +1,3 @@
----
-hide:
-  - title
-  - navigation
-  - toc
----
 # About
 <figure markdown>
   ![](../images/minniecrop.jpg){ width="300" }

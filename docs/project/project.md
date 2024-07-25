@@ -1,8 +1,3 @@
----
-hide:
-    - toc
----
-
 # Initial ideas
 
 i don't know

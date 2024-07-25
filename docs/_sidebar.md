@@ -3,7 +3,7 @@
 - [Home](/README)
 - [About](about/me.md)
 - [Master Project](project/home.md)
-- [Term 1](term1/)
+- Term 1
     - [Landing](term1/01-Landing-week/Landing.md)
     - [Documenting Design](term1/02-Documenting-design/Documenting-design.md)
     - [Design Studio](term1/03-Design-studio)
@@ -14,22 +14,22 @@
     - [Extended Intelligence](term1/09-Extended-Intelligence/Extended-Intelligence.md)
     - [Design Dialogues](term1/10-Design-Dialogues/Design-Dialogues.md)
     - [Notes](term1/99-Notes/DD-Notes.md)
-- [Term 2](term2/00-Design-Studio/Design-Studio.md)
+- Term 2
     - [Design Studio](term2/00-Design-Studio/Design-Studio.md)
     - [Designing in a State of Climate Emergency](term2/01-Designing-Climate-Emergency/Day01.md)
-    - [Communicating Ideas](term2/02-Communicating-Ideas/Communicating-Ideas.md)<!--    - [Designing with Values](term2/03-Designing-with-Values/) -->
+    - [Communicating Ideas](term2/02-Communicating-Ideas/Communicating-Ideas.md)
     - [Future Talks](term2/03-Future-Talks/Designing-with-values.md)
     - [Digital Prototyping](term2/04-Digital-Prototyping/Microchallenge-01.md)
     - [Measuring the World](term2/05-Measuring-the-world/Measuring-the-World.md)
     - [Fair Futures](term2/06-Fair-Futures/Fair-Futures.md)
     - [Extended Intelligences](term2/07-Extended-Intelligences/Extended-Intelligences.md)
     - [Research Trip](term2/08-Research-Trip/Research-Trip.md)
-- [Term 3](term3/01-AoWS/term-3-AoWS.md)
+- Term 3
     - [Design Studio](term3/00-Design-Studio/)
     - [AoWS 2.0](term3/01-AoWS/term-3-AoWS.md)
     - [Communicating Ideas](term3/02-Communicating-Ideas/)
     - [Future Talks](term3/03-Future-Talks/)
     - [Design Ethics](term3/04-Design-Ethics/Design-Ethics.md)
     - [Digital Prototyping for Design](term3/05-Digital-Prototyping/Module-03.md)
-- [Side Quests]()
+- Side Quests
     - [Git Support](term1/02-Documenting-design/Git-problems.md)

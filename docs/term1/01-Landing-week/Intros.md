@@ -1,8 +1,3 @@
----
-hide:
-    - toc
----
-
 # Program Introductions
 
 We met Tomas, Guillem and Laura. The other faculty were introduced via Zoom.

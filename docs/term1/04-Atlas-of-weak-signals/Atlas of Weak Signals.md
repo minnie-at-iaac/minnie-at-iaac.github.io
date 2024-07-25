@@ -1,6 +1,5 @@
----
-title: Atlas of Weak Signals
----
+# Atlas of Weak Signals
+
 
 For most of us, the term, as well as the concept of "Atlas of Weak Signals", is new. I first interpreted each of the words as I understood them.  
 
@@ -29,7 +28,9 @@ These tools exist in this hierarchy: Design Space contains AoWS and AoWS contain
 ## AoWS Group Activities
 ### Class Activity
 The first activity is involved the entire class using the toolkit for the first time. 
-
+![](../../images/AoWS/aows-activity.jpg)
+![](../../images/AoWS/class-task-01.jpg)
+<!--
 <figure markdown>
   ![](../../images/AoWS/aows-activity.jpg){width="100%" data-gallery="aows-activity"}
   <figcaption></figcaption>
@@ -38,18 +39,20 @@ The first activity is involved the entire class using the toolkit for the first 
   ![](../../images/AoWS/class-task-01.jpg){width="100%" data-gallery="aows-activity"}
   <figcaption></figcaption>
 </figure>
-
+-->
 ### Group Activity
 We then repeated the activity in smaller groups of four. 
-
+![](../../images/AoWS/group-task-01.jpg)
+<!--
 <figure markdown>
   ![](../../images/AoWS/group-task-01.jpg)
   <figcaption></figcaption>
 </figure>
+-->
 
 ### Suggest new cards
 
-![](../../images/AoWS/proposed-new-cards.jpg){width="100%" data-gallery="aows-new-cards"}
+![](../../images/AoWS/proposed-new-cards.jpg)
 
 Weak Signals:  
   Humanitarian Engineering and Design,   
@@ -59,6 +62,9 @@ Random Trigger: Fast Fashion
 
 ### Design Sprint
 During my undergrad, my friend and I created a card game similar to this. It was called "Design Sprint". Ours was focused on current and more localized context ("stronger signals"?) with the goal of teaching Design Thinking by coming up with a design intervention. The AoWS cards are far more rooted in research, more conceptual and radical.  
+
+![2019. Design Sprint Prototype](../../images/AoWS/design-sprint-01.jpg){data-gallery="design-sprint"}
+![2019. Playtesting](../../images/AoWS/design-sprint-02.jpg){data-gallery="design-sprint"}
 
 <figure markdown>
   ![2019. Design Sprint Prototype](../../images/AoWS/design-sprint-01.jpg){data-gallery="design-sprint"}
@@ -127,6 +133,7 @@ This is my ongoing Design Space. For the initial submission, I have created a bo
 It still is a brain dump of the various issues I want to tackle. I plan to update this, adding connections and tuning in to a specific topic, as we go. 
 
 My early concern is that, am I looking at only current and local problems, and less at emergent futures?
+![](../../images/AoWS/my-design-space-01.jpg){width="500" data-gallery="design-space"}
 
 <figure markdown>
   ![](../../images/AoWS/my-design-space-01.jpg){width="500" data-gallery="design-space"}
@@ -137,6 +144,7 @@ My early concern is that, am I looking at only current and local problems, and l
 
 ### Archive
 **Multiscalar Personal Design Space**
+![](../../images/AoWS/circle.jpg){width="500" data-gallery="design-space"}
 <figure markdown>
   ![](../../images/AoWS/circle.jpg){width="500" data-gallery="design-space"}
   <figcaption>1.1</figcaption>
@@ -144,6 +152,7 @@ My early concern is that, am I looking at only current and local problems, and l
 
 
 **Personal AoWS Board**
+![](../../images/AoWS/miro-my-atlas-01.jpg){width="500" data-gallery="design-space"}
 <figure markdown>
   ![](../../images/AoWS/miro-my-atlas-01.jpg){width="500" data-gallery="design-space"}
   <figcaption>1.0</figcaption>

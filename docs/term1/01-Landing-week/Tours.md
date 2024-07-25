@@ -1,8 +1,3 @@
----
-hide:
-    - toc
----
-
 # Poblenou
 
 We toured nearby spaces in Poblenou:

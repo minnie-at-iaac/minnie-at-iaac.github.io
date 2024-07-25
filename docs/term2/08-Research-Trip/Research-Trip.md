@@ -1,8 +1,3 @@
----
-hide:
-    - toc
----
-
 ![](../../images/Research-trip/hike_scene.jpg)
 ## Sensing and Picking, Plants and Pottery
 

@@ -1,9 +1,3 @@
----
-hide:
-    - navigation
-    #- toc
----
-
 # **UNTRASHING: being in-between trash, sounds and community**
 (working title)
 
