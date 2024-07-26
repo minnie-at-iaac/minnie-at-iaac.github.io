@@ -19,7 +19,7 @@
     - [Designing in a State of Climate Emergency](term2/01-Designing-Climate-Emergency/Day01.md)
     - [Communicating Ideas](term2/02-Communicating-Ideas/Communicating-Ideas.md)
     - [Future Talks](term2/03-Future-Talks/Designing-with-values.md)
-    - [Digital Prototyping](term2/04-Digital-Prototyping/Microchallenge-01.md)
+    - [Digital Prototyping](term2/04-Digital-Prototyping/)
     - [Measuring the World](term2/05-Measuring-the-world/Measuring-the-World.md)
     - [Fair Futures](term2/06-Fair-Futures/Fair-Futures.md)
     - [Extended Intelligences](term2/07-Extended-Intelligences/Extended-Intelligences.md)
@@ -30,6 +30,6 @@
     - [Communicating Ideas](term3/02-Communicating-Ideas/)
     - [Future Talks](term3/03-Future-Talks/)
     - [Design Ethics](term3/04-Design-Ethics/Design-Ethics.md)
-    - [Digital Prototyping for Design](term3/05-Digital-Prototyping/Module-03.md)
+    - [Digital Prototyping for Design](term3/05-Digital-Prototyping/)
 - Side Quests
     - [Git Support](term1/02-Documenting-design/Git-problems.md)
