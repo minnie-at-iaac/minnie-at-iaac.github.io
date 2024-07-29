@@ -65,13 +65,16 @@ In the Open Jam, Nicolo made a quick speech introducing the project and invited 
 
 At 8pm, we did our performance, a semi-rehearsed sound composition that showcased each artifact on its own and together. Despite the panic and nerves, we, who have never played such weird instruments for a crowd before, managed to pull through. I am very proud of Anna and Nicolo. 
 
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/V8TntgS72AU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Video by Nicolo.  
+
 ### Ironies we face
 
 As much as the intention of bringing awareness to trash, we also could not avoid making trash.
 
 As much as we want to tackle decolonization, we are bound by the rules of our former colonizers.
 
-### Ang Pagpupugay ng Araw ng Kalayaan sa Espana
+### Ang Pagpupugay ng Araw ng Kalayaan sa España
 
 Isang bukod-tanging pagkakataon na nagkataon itong Alquimia sa anibersaryo ng Araw ng Kalayaan ng Pilipinas. Hunyo 12, 1898 ang idineklarang pagkakasarinlan ng bansang Pilipinas mula sa pananakop ng mga Kastila. Hindi ito tunay na kasarinlan pagkat ang Estados Unidos naman ang naging mananakop mula noon hanggang Hulyo 4, 1946. Masasabi rin na hanggang ngayon nasa ilalim parin ang Pilipinas ng imperyalismo - isa pang malalim at separate na talakayan. 
 
