@@ -1,7 +1,6 @@
 # About
 
-![](../images/minniecrop.jpg)  
-(ahh boba tea)
+![](../images/minniecrop.jpg 'ahh boba tea')  
 
 ## What (1)
 
