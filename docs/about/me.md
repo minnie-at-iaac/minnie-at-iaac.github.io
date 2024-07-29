@@ -1,10 +1,8 @@
 # About
-<figure markdown>
-  ![](../images/minniecrop.jpg){ width="300" }
-  <figcaption>ahh boba tea</figcaption>
-</figure>
 
-<div class="annotate" markdown>
+![](../images/minniecrop.jpg)  
+(ahh boba tea)
+
 ## What (1)
 
 I will put my thoughts, reflections, projects, etc. in this space as I take the  **[Master in Design for Emergent Futures](https://iaac.net/educational-programmes/masters-programmes/master-in-design-for-emergent-futures-mdef "weeee")** at IAAC and ELISAVA this 2023-24.  
