@@ -14,6 +14,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/perspective-subtle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
 </head>
 <body>
   <div id="app">Please wait...</div>
@@ -39,20 +41,41 @@
         depth: 6,
         hideOtherSidebarContent: true, // whether or not to hide other sidebar content
       },
+      footer: {
+        copy: '<span>&copy; 2024</span>',
+        auth: 'by Minnie Pangilinan',
+        pre: '<hr/>',
+        style: 'text-align: right;',
+        class: 'className',
+      },
       themeable: {
           readyTransition : true, // default
           responsiveTables: true  // default
-      }
+      },
+      vueGlobalOptions: {
+        data() {
+        },
+      },
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Vuejs Production -->
+  <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
   <!-- docsify-themeable -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="https://unpkg.com/@h-hg/docsify-image-caption/dist/docsify-image-caption.min.js"></script>
-  <!-- Latest v2.x.x -->
+  <!-- docsify-copy-code Latest v2.x.x -->
   <script src="https://unpkg.com/docsify-copy-code@2"></script>
+  <!-- tippy -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script>
+    tippy.setDefaultProps({delay: 50, theme: 'light', animation: 'perspective-subtle'});
+  </script>
+  <!-- footer -->
+  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
 </body>
 </html>
