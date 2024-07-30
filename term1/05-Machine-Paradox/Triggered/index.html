@@ -1185,270 +1185,271 @@
 <div><p>Triggered</p>
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQgerue-YyYcLRTJawOIUOKAdpP8VhmkDQ1P8AJZucsmuzc5au8tcNQx4a_o2y-S16UtLv_2gLkXZEA/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-<details>
-<summary>Current code, they’re messy, i know</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Main</label><label for="__tabbed_1_2">LED strip</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="cp">#define BUTTON_COUNT 10 </span><span class="c1">// number of buttons</span>
-<span class="cp">#define COMBOBREAKER_COUNT 2 </span><span class="c1">// number of buttons needed to be on to solve. THIS SHOULD BE  1 &lt; n &lt; BUTTON_COUNT</span>
-<span class="cp">#define LED_PIN 13</span>
-<span class="cp">#define LED_PIN_R 6</span>
-<span class="cp">#define LED_PIN_G 9</span>
-<span class="cp">#define LED_PIN_B 10</span>
-<span class="cp">#define EXT_LIGHT_PIN 11</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">"Arduino.h"</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">"DFRobotDFPlayerMini.h"</span>
+<blockquote>
+<p>Current code, they’re messy, i know  </p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>/**/
+#define BUTTON_COUNT 10 // number of buttons
+#define COMBOBREAKER_COUNT 2 // number of buttons needed to be on to solve. THIS SHOULD BE  1 &lt; n &lt; BUTTON_COUNT
+#define LED_PIN 13
+#define LED_PIN_R 6
+#define LED_PIN_G 9
+#define LED_PIN_B 10
+#define EXT_LIGHT_PIN 11
+#include "Arduino.h"
+#include "DFRobotDFPlayerMini.h"
+#if (defined(ARDUINO_AVR_UNO) || defined(ESP8266))   // Using a soft serial port
+#include &lt;SoftwareSerial.h&gt;
+SoftwareSerial softSerial(/*rx =*/4, /*tx =*/5);
+#define FPSerial softSerial
+#else
+#define FPSerial Serial1
+#endif
+```
+/** Setup for buttons **/
+const uint8_t buttonPins [BUTTON_COUNT] = {A0, A1, A2, A3, A4, A5, 2, 3, 7, 8}; // for 10 buttons
+//const uint8_t buttonPins [BUTTON_COUNT] = {A0, A1, A2, A3}; // for 4 buttons
 
-<span class="cp">#if (defined(ARDUINO_AVR_UNO) || defined(ESP8266))   </span><span class="c1">// Using a soft serial port</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span>
-<span class="n">SoftwareSerial</span><span class="w"> </span><span class="nf">softSerial</span><span class="p">(</span><span class="cm">/*rx =*/</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="cm">/*tx =*/</span><span class="mi">5</span><span class="p">);</span>
-<span class="cp">#define FPSerial softSerial</span>
-<span class="cp">#else</span>
-<span class="cp">#define FPSerial Serial1</span>
-<span class="cp">#endif</span>
+int buttonReadOuts [BUTTON_COUNT];
+int lastButtonReadOuts [BUTTON_COUNT];
+int combobreaker[BUTTON_COUNT];
+int buttonStatuses [BUTTON_COUNT];
 
-<span class="cm">/** Setup for buttons **/</span>
-<span class="k">const</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">buttonPins</span><span class="w"> </span><span class="p">[</span><span class="n">BUTTON_COUNT</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">A0</span><span class="p">,</span><span class="w"> </span><span class="n">A1</span><span class="p">,</span><span class="w"> </span><span class="n">A2</span><span class="p">,</span><span class="w"> </span><span class="n">A3</span><span class="p">,</span><span class="w"> </span><span class="n">A4</span><span class="p">,</span><span class="w"> </span><span class="n">A5</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">};</span><span class="w"> </span><span class="c1">// for 10 buttons</span>
-<span class="c1">//const uint8_t buttonPins [BUTTON_COUNT] = {A0, A1, A2, A3}; // for 4 buttons</span>
+bool unlocked = false;
+bool backdoor_unlock = false;
 
-<span class="kt">int</span><span class="w"> </span><span class="n">buttonReadOuts</span><span class="w"> </span><span class="p">[</span><span class="n">BUTTON_COUNT</span><span class="p">];</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">lastButtonReadOuts</span><span class="w"> </span><span class="p">[</span><span class="n">BUTTON_COUNT</span><span class="p">];</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">combobreaker</span><span class="p">[</span><span class="n">BUTTON_COUNT</span><span class="p">];</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">buttonStatuses</span><span class="w"> </span><span class="p">[</span><span class="n">BUTTON_COUNT</span><span class="p">];</span>
+int randomizerIndex;
+int randNumber1 = 0;
+int temp;
 
-<span class="kt">bool</span><span class="w"> </span><span class="n">unlocked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">backdoor_unlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+int led_pulse = 0;
+int pulse_rate = 15;
+int pulse_direction = 1;
+/** End setup for buttons **/
 
-<span class="kt">int</span><span class="w"> </span><span class="n">randomizerIndex</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">randNumber1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+/** Setup for speakers **/
+DFRobotDFPlayerMini myDFPlayer;
+void printDetail(uint8_t type, int value);
+int playIndex = 1;
+int maxPlayIndex = 17;
+/** End Setup for speakers **/
 
-<span class="kt">int</span><span class="w"> </span><span class="n">led_pulse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">pulse_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">pulse_direction</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="cm">/** End setup for buttons **/</span>
+void setup()
+{
+Serial.begin(19200);
+pinMode(LED_PIN, OUTPUT);
+pinMode(LED_PIN_R, OUTPUT);
+pinMode(LED_PIN_G, OUTPUT);
+pinMode(LED_PIN_B, OUTPUT);
+pinMode(EXT_LIGHT_PIN, OUTPUT);
 
-<span class="cm">/** Setup for speakers **/</span>
-<span class="n">DFRobotDFPlayerMini</span><span class="w"> </span><span class="n">myDFPlayer</span><span class="p">;</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">printDetail</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">playIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">maxPlayIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span>
-<span class="cm">/** End Setup for speakers **/</span>
+for(int i = 0; i &lt; BUTTON_COUNT; i++)
+{
+    pinMode(buttonPins[i], INPUT_PULLUP);
+    buttonReadOuts[i] = 1;
+    lastButtonReadOuts[i] = 1;
+    buttonStatuses[i] = -1;
+    if (i &lt; COMBOBREAKER_COUNT)
+    { combobreaker[i] = 1;} else 
+    { combobreaker[i] = -1;}
+}
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">19200</span><span class="p">);</span>
-<span class="n">pinMode</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="n">pinMode</span><span class="p">(</span><span class="n">LED_PIN_R</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="n">pinMode</span><span class="p">(</span><span class="n">LED_PIN_G</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="n">pinMode</span><span class="p">(</span><span class="n">LED_PIN_B</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="n">pinMode</span><span class="p">(</span><span class="n">EXT_LIGHT_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+randomSeed(analogRead(0));
+randomizerIndex = 0;
+digitalWrite(LED_PIN, HIGH);
+unlocked = false;
 
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">BUTTON_COUNT</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">buttonPins</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">INPUT_PULLUP</span><span class="p">);</span>
-<span class="w">    </span><span class="n">buttonReadOuts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="n">lastButtonReadOuts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="n">buttonStatuses</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">COMBOBREAKER_COUNT</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="n">combobreaker</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="n">combobreaker</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;}</span>
-<span class="p">}</span>
+// speakers
+#if (defined ESP32)
+    FPSerial.begin(9600, SERIAL_8N1, /*rx =*/D3, /*tx =*/D2);
+#else
+    FPSerial.begin(9600);
+#endif
 
-<span class="n">randomSeed</span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
-<span class="n">randomizerIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-<span class="n">unlocked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+Serial.begin(115200);
+Serial.println();
+Serial.println(F("DFRobot DFPlayer Mini Demo"));
+Serial.println(F("Initializing DFPlayer ... (May take 3~5 seconds)"));
 
-<span class="c1">// speakers</span>
-<span class="cp">#if (defined ESP32)</span>
-<span class="w">    </span><span class="n">FPSerial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">,</span><span class="w"> </span><span class="n">SERIAL_8N1</span><span class="p">,</span><span class="w"> </span><span class="cm">/*rx =*/</span><span class="n">D3</span><span class="p">,</span><span class="w"> </span><span class="cm">/*tx =*/</span><span class="n">D2</span><span class="p">);</span>
-<span class="cp">#else</span>
-<span class="w">    </span><span class="n">FPSerial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-<span class="cp">#endif</span>
+if (!myDFPlayer.begin(FPSerial, /*isACK = */true, /*doReset = */true)) {  //Use serial to communicate with mp3.
+    Serial.println(F("Unable to begin:"));
+    Serial.println(F("1.Please recheck the connection!"));
+    Serial.println(F("2.Please insert the SD card!"));
+    while(true){
+    delay(0); // Code to compatible with ESP8266 watch dog.
+    }
+}
+Serial.println(F("DFPlayer Mini online."));
 
-<span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"DFRobot DFPlayer Mini Demo"</span><span class="p">));</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"Initializing DFPlayer ... (May take 3~5 seconds)"</span><span class="p">));</span>
+myDFPlayer.volume(30);  //Set volume value. From 0 to 30
+myDFPlayer.play(1);  //Play the first mp3
+}
 
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">myDFPlayer</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">FPSerial</span><span class="p">,</span><span class="w"> </span><span class="cm">/*isACK = */</span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="cm">/*doReset = */</span><span class="nb">true</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">//Use serial to communicate with mp3.</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"Unable to begin:"</span><span class="p">));</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"1.Please recheck the connection!"</span><span class="p">));</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"2.Please insert the SD card!"</span><span class="p">));</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="nb">true</span><span class="p">){</span>
-<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// Code to compatible with ESP8266 watch dog.</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"DFPlayer Mini online."</span><span class="p">));</span>
+void loop()
+{
+resetCombo(); 
 
-<span class="n">myDFPlayer</span><span class="p">.</span><span class="n">volume</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span><span class="w">  </span><span class="c1">//Set volume value. From 0 to 30</span>
-<span class="n">myDFPlayer</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">  </span><span class="c1">//Play the first mp3</span>
-<span class="p">}</span>
+for(int i = 0; i &lt; BUTTON_COUNT; i++) 
+{
+    buttonReadOuts[i] = digitalRead(buttonPins[i]);
+}
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="n">resetCombo</span><span class="p">();</span><span class="w"> </span>
+    printButtonStatuses();
+    Serial.println(unlocked);
 
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">BUTTON_COUNT</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">buttonReadOuts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">buttonPins</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
+    unlocked = false;
+    for(int i = 0; i &lt; BUTTON_COUNT; i++)
+    {
+    if(combobreaker[i] == buttonStatuses[i])
+    {
+        unlocked = true;
+    } else 
+    {
+        unlocked = false;
+        break;
+    }
+    }
 
-<span class="w">    </span><span class="n">printButtonStatuses</span><span class="p">();</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">unlocked</span><span class="p">);</span>
+    if(unlocked)
+    {
+    lightsOff(); // solved! shut down the machine
+    } else
+    {
+    // keep LED pulsing
+    if(led_pulse + pulse_rate &lt; 5 || led_pulse + pulse_rate &gt; 250)
+    {
+        pulse_rate = -1*pulse_rate;
+    }
+    led_pulse = led_pulse + pulse_rate;
+    analogWrite(LED_PIN_R, led_pulse);
+    analogWrite(LED_PIN_G, led_pulse);
+    analogWrite(LED_PIN_B, led_pulse);
+    digitalWrite(EXT_LIGHT_PIN, LOW);
 
-<span class="w">    </span><span class="n">unlocked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">BUTTON_COUNT</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">combobreaker</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">buttonStatuses</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">unlocked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">unlocked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="w">        </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
+    for(int i = 0; i &lt; BUTTON_COUNT; i++)
+    {
+        // when a button is pressed
+        if(buttonReadOuts[i] == 1 &amp;&amp; lastButtonReadOuts[i] == 0)
+        {
+            if(i == 1)
+            {
+            digitalWrite(EXT_LIGHT_PIN, HIGH);
+            }
 
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">unlocked</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">    </span><span class="n">lightsOff</span><span class="p">();</span><span class="w"> </span><span class="c1">// solved! shut down the machine</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// keep LED pulsing</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">led_pulse</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pulse_rate</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">led_pulse</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pulse_rate</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">250</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">pulse_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="o">*</span><span class="n">pulse_rate</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="n">led_pulse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">led_pulse</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pulse_rate</span><span class="p">;</span>
-<span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">LED_PIN_R</span><span class="p">,</span><span class="w"> </span><span class="n">led_pulse</span><span class="p">);</span>
-<span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">LED_PIN_G</span><span class="p">,</span><span class="w"> </span><span class="n">led_pulse</span><span class="p">);</span>
-<span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">LED_PIN_B</span><span class="p">,</span><span class="w"> </span><span class="n">led_pulse</span><span class="p">);</span>
-<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">EXT_LIGHT_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+            blinkFast(); // red error lights
+            pulse_rate = pulse_rate + 10; // increase fade rate
+            buttonStatuses[i] = -1*buttonStatuses[i];
+            if(playIndex == maxPlayIndex)
+            {
+            playIndex = 0;
+            } else
+            {
+            playIndex = playIndex + 1;
+            }
+            myDFPlayer.play(playIndex);
+        }
+    }
 
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">BUTTON_COUNT</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// when a button is pressed</span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">buttonReadOuts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">lastButtonReadOuts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">            </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">EXT_LIGHT_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
+    for(int i = 0; i &lt; BUTTON_COUNT; i++) {
+    lastButtonReadOuts[i] = buttonReadOuts[i];
+    }
+}
 
-<span class="w">            </span><span class="n">blinkFast</span><span class="p">();</span><span class="w"> </span><span class="c1">// red error lights</span>
-<span class="w">            </span><span class="n">pulse_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pulse_rate</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// increase fade rate</span>
-<span class="w">            </span><span class="n">buttonStatuses</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="o">*</span><span class="n">buttonStatuses</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">playIndex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">maxPlayIndex</span><span class="p">)</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">            </span><span class="n">playIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">            </span><span class="n">playIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">playIndex</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">            </span><span class="n">myDFPlayer</span><span class="p">.</span><span class="n">play</span><span class="p">(</span><span class="n">playIndex</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
+for(int i = 0; i &lt; BUTTON_COUNT; i++)
+{
+    if(buttonReadOuts[i] == 0)
+    {
+    backdoor_unlock = true;
+    } else 
+    {
+    backdoor_unlock = false;
+    break;
+    }
+}
 
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">BUTTON_COUNT</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">lastButtonReadOuts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buttonReadOuts</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+if(backdoor_unlock)
+{
+    for(int i = 0; i &lt; BUTTON_COUNT; i++)
+    {
+        buttonReadOuts[i] = 1;
+        lastButtonReadOuts[i] = 1;
+        buttonStatuses[i] = -1;
+    }
+    randomSeed(analogRead(0));
+    randomizerIndex = 0;
+    digitalWrite(LED_PIN, LOW);
+    delay(2000);
+    digitalWrite(LED_PIN, HIGH);
+    unlocked = false;
+    backdoor_unlock = false;
+}
 
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">BUTTON_COUNT</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">buttonReadOuts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">    </span><span class="n">backdoor_unlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">    </span><span class="n">backdoor_unlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="w">    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+delay(200);
+}
 
-<span class="k">if</span><span class="p">(</span><span class="n">backdoor_unlock</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">BUTTON_COUNT</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="n">buttonReadOuts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">        </span><span class="n">lastButtonReadOuts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">        </span><span class="n">buttonStatuses</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="n">randomSeed</span><span class="p">(</span><span class="n">analogRead</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
-<span class="w">    </span><span class="n">randomizerIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">2000</span><span class="p">);</span>
-<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-<span class="w">    </span><span class="n">unlocked</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="w">    </span><span class="n">backdoor_unlock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
-<span class="p">}</span>
+void resetCombo() {
+while (randomizerIndex &lt; BUTTON_COUNT) {                                 //10 iterations
+    randNumber1 = random(0,BUTTON_COUNT);
+    temp = combobreaker[randNumber1];                    //temporary integer 
+    combobreaker[randNumber1] = combobreaker[randomizerIndex];    //swapping the values
+    combobreaker[randomizerIndex] = temp;                    //swapping the values
+    randomizerIndex++;
+    if (randomizerIndex == BUTTON_COUNT) {
+    printresults();
+    }
+}
+}
 
-<span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
-<span class="p">}</span>
+void printresults() {
+Serial.println(combobreaker[0]);
+Serial.println(combobreaker[1]);
+Serial.println(combobreaker[2]);
+Serial.println(combobreaker[3]);
+}
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">resetCombo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">randomizerIndex</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">BUTTON_COUNT</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">                                 </span><span class="c1">//10 iterations</span>
-<span class="w">    </span><span class="n">randNumber1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">BUTTON_COUNT</span><span class="p">);</span>
-<span class="w">    </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">combobreaker</span><span class="p">[</span><span class="n">randNumber1</span><span class="p">];</span><span class="w">                    </span><span class="c1">//temporary integer </span>
-<span class="w">    </span><span class="n">combobreaker</span><span class="p">[</span><span class="n">randNumber1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">combobreaker</span><span class="p">[</span><span class="n">randomizerIndex</span><span class="p">];</span><span class="w">    </span><span class="c1">//swapping the values</span>
-<span class="w">    </span><span class="n">combobreaker</span><span class="p">[</span><span class="n">randomizerIndex</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span><span class="w">                    </span><span class="c1">//swapping the values</span>
-<span class="w">    </span><span class="n">randomizerIndex</span><span class="o">++</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">randomizerIndex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BUTTON_COUNT</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">printresults</span><span class="p">();</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-<span class="p">}</span>
+void printButtonStatuses() {
+for(int i = 0; i &lt; BUTTON_COUNT; i++)
+{
+    Serial.print(i);
+    Serial.print(": ");
+    Serial.print(buttonStatuses[i]);
+    Serial.print(", ");
+    Serial.println(combobreaker[i]);
+}
+}
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">printresults</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">combobreaker</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">combobreaker</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">combobreaker</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
-<span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">combobreaker</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
-<span class="p">}</span>
+void blinkFast()
+{
+for(int i=0; i &lt; 5; i++)
+{
+    analogWrite(LED_PIN_R, led_pulse);
+    analogWrite(LED_PIN_G, 0);
+    analogWrite(LED_PIN_B, 0);
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">printButtonStatuses</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">BUTTON_COUNT</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">": "</span><span class="p">);</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">buttonStatuses</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">", "</span><span class="p">);</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">combobreaker</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
-<span class="p">}</span>
-<span class="p">}</span>
+    delay(50);
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">blinkFast</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">LED_PIN_R</span><span class="p">,</span><span class="w"> </span><span class="n">led_pulse</span><span class="p">);</span>
-<span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">LED_PIN_G</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">LED_PIN_B</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+    analogWrite(LED_PIN_R, 0);
+    analogWrite(LED_PIN_G, 0);
+    analogWrite(LED_PIN_B, 0);
 
-<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
+    delay(50);
+}
+}
 
-<span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">LED_PIN_R</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">LED_PIN_G</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="w">    </span><span class="n">analogWrite</span><span class="p">(</span><span class="n">LED_PIN_B</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-
-<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">lightsOff</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
-<span class="n">analogWrite</span><span class="p">(</span><span class="n">LED_PIN_R</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="n">analogWrite</span><span class="p">(</span><span class="n">LED_PIN_G</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="n">analogWrite</span><span class="p">(</span><span class="n">LED_PIN_B</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="n">myDFPlayer</span><span class="p">.</span><span class="n">pause</span><span class="p">();</span>
-<span class="n">digitalWrite</span><span class="p">(</span><span class="n">EXT_LIGHT_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
-<span class="p">}</span>
+void lightsOff()
+{
+digitalWrite(LED_PIN, LOW);
+analogWrite(LED_PIN_R, 0);
+analogWrite(LED_PIN_G, 0);
+analogWrite(LED_PIN_B, 0);
+myDFPlayer.pause();
+digitalWrite(EXT_LIGHT_PIN, HIGH);
+}
+```
 </code></pre></div>
-</div>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">LED strip</label></div>
+<div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="c1">// A basic everyday NeoPixel strip test program.</span>
 
@@ -1614,8 +1615,7 @@
 </code></pre></div>
 </div>
 </div>
-</div>
-</details></div>
+</div></div>
 
 
 
@@ -1636,7 +1636,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 25, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 30, 2024</span>
   </span>
 
     
