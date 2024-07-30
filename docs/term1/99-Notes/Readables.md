@@ -15,4 +15,4 @@ Here I will try to document things I've read, maybe put some notes.
 
 ### Friction
 
-### Socail Matter, Social Design
+### Social Matter, Social Design

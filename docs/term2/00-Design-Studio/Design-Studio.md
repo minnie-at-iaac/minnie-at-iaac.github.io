@@ -14,3 +14,6 @@ ___
 ___
 ## Third Intervention "series": Untrashing with Panchi
 ![](../../images/Design%20Studio/kinetic_01.gif)
+
+___
+Check out [my term 2 video](/term2/00-Design-Studio/Term-2-Video.md)

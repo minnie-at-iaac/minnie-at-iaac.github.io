@@ -1,6 +1,6 @@
-# Design with Values
+# Future Talks: Design with Values
 
-!!! info "Faculty and Facilitators"
+> info "Faculty and Facilitators"
     Jessica Guy and Olga Trevisan
 
 ## Reflection Tree

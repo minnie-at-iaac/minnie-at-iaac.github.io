@@ -8,6 +8,9 @@ I am presenting this research question:
 ## Communication Matrix
 ![](../../images/Communicating-Ideas/StakeholdersRadar.jpg)
 
+## Tandem Project
+Panchi and I are working together, [here's an intro video.](/term2/02-Communicating-Ideas/Tandem-Project.md)
+
 
 ## Reflection
 I found it really difficult to follow this seminar because defining my project is still a work in progress. Communication and writing have always been a challenging for me. It would always take me ridiculous amounts of time to even put a sentence that I am happy with and convey the ideas I want to show. (I don't even like writing.)

@@ -1,4 +1,4 @@
-!!! warning "I was sick this week"
+> warning "I was sick this week"
     I was only able to attend one class the Bio Zero week :thermometer_face: but thanks to my classmates, I am catching up. Special thanks to Carlotta and Manuja for sharing their notes!
 
 
