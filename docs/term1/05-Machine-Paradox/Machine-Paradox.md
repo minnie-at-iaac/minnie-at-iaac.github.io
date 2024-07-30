@@ -1,4 +1,4 @@
-Machine Paradox Reflection
+# Machine Paradox Reflection
 
 
 The seminar is divided into two parts. The first week, we had to take apart "broken" machines and make a forensic report and in the second week we had to create a new machine with working components from the broken machines.
