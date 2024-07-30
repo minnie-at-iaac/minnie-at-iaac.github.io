@@ -61,6 +61,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://minnie-at-iaac.github.io/term1/03-Design-studio/</loc>
+         <lastmod>2024-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://minnie-at-iaac.github.io/term1/03-Design-studio/Design-studio-01/</loc>
          <lastmod>2024-07-30</lastmod>
          <changefreq>daily</changefreq>
@@ -81,7 +86,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://minnie-at-iaac.github.io/term1/03-Design-studio/_sidebar/</loc>
+         <lastmod>2024-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://minnie-at-iaac.github.io/term1/04-Atlas-of-weak-signals/Atlas%20of%20Weak%20Signals/</loc>
+         <lastmod>2024-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://minnie-at-iaac.github.io/term1/05-Machine-Paradox/</loc>
          <lastmod>2024-07-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -101,12 +116,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://minnie-at-iaac.github.io/term1/05-Machine-Paradox/_sidebar/</loc>
+         <lastmod>2024-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://minnie-at-iaac.github.io/term1/06-Living-with-Ideas/</loc>
+         <lastmod>2024-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://minnie-at-iaac.github.io/term1/06-Living-with-Ideas/Living-with-Ideas/</loc>
          <lastmod>2024-07-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://minnie-at-iaac.github.io/term1/06-Living-with-Ideas/Making-a-Companion/</loc>
+         <lastmod>2024-07-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://minnie-at-iaac.github.io/term1/06-Living-with-Ideas/_sidebar/</loc>
          <lastmod>2024-07-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
