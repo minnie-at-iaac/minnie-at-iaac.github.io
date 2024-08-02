@@ -4,8 +4,8 @@
     /* Color
     ------------------------------------------------------------------------- */
     /* Monochrome */
-    --mono-hue        : 113;
-    --mono-saturation : 60%;
+    --mono-hue        : 168;
+    --mono-saturation : 80%;
 
     /* Monochrome shades (darker) and tints (lighter) */
     --mono-shade3     : hsl(var(--mono-hue), var(--mono-saturation), 20%); /* #333333 */
@@ -17,8 +17,8 @@
     --mono-tint3      : hsl(var(--mono-hue), var(--mono-saturation), 97%); /* #f7f7f7 */
 
     /* Theme */
-    --theme-hue       : 113;
-    --theme-saturation: 90%;
+    --theme-hue       : 168;
+    --theme-saturation: 80%;
     --theme-lightness : 45%;
     --theme-color     : hsl(var(--theme-hue), var(--theme-saturation), var(--theme-lightness));
 
@@ -611,7 +611,7 @@
 
 .docsify-dark-mode,
 .docsify-dark-mode .sidebar,
-.docsify-dark-mode .cover,
+.docsify-dark-mode .cover .cover-main>p:last-child a,
 .docsify-dark-mode .search input,
 .docsify-dark-mode .app-nav li ul
 .docsify-dark-mode h1 {
@@ -620,6 +620,7 @@
   scrollbar-color: var(--dark-theme-color) var(--dark-base-color);
   scrollbar-width: thin;
   --sidebar-toggle-icon-color: var(--dark-theme-color);
+  border-color: var(--dark-theme-color);  
 }
 .docsify-dark-mode .markdown-section code,
 .docsify-dark-mode .markdown-section pre,
