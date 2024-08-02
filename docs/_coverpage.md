@@ -7,7 +7,7 @@
 # Site update in progress...
 > Some things might be broken :face_with_spiral_eyes:
 
-<a onclick="changeTheme()">Change theme</a>
+<a id="switch-theme-btn" onclick="changeTheme()">Switch theme</a>
 <a href="#/README">Enter</a>
 
 

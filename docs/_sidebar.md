@@ -35,6 +35,6 @@
 - Side Quests
     - [Git Support](term1/02-Documenting-design/Git-problems.md)
     - [Readables](term1/99-Notes/Readables.md)
-    - [Kite Workshop]()
-    - [Pure Gold Workshop]()
+    - [Kite Workshop](#)
+    - [Pure Gold Workshop](#)
     - [Notes](term1/99-Notes/DD-Notes.md)
