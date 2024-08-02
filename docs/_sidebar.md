@@ -3,6 +3,7 @@
 - [Home](/README)
 - [About](about/me.md)
 - [Master Project](project/home.md)
+- [Research Trip](term2/08-Research-Trip/Research-Trip.md)
 - Term 1
     - [Landing](term1/01-Landing-week/Landing.md)
     - [Documenting Design](term1/02-Documenting-design/Documenting-design.md)
@@ -24,7 +25,6 @@
     - [Measuring the World](term2/05-Measuring-the-world/Measuring-the-World.md)
     - [Fair Futures](term2/06-Fair-Futures/Fair-Futures.md)
     - [Extended Intelligences](term2/07-Extended-Intelligences/Extended-Intelligences.md)
-    - [Research Trip](term2/08-Research-Trip/Research-Trip.md)
 - Term 3
     - [Design Studio](term3/00-Design-Studio/)
     - [AoWS 2.0](term3/01-AoWS/term-3-AoWS.md)
