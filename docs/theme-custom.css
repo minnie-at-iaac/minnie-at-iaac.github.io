@@ -112,13 +112,13 @@
 /* Content
 ============================================================================= */
 :root {
-    --content-max-width                 : 55em;
+    --content-max-width                 : 70em;
 
     /* Blockquote */
     --blockquote-background             : var(--mono-tint3);
     --blockquote-border-color           : ;
     --blockquote-border-style           : solid;
-    --blockquote-border-width           : ;
+    --blockquote-border-width           : 0 0 0 4px;
     --blockquote-border-radius          : var(--border-radius-m);
     --blockquote-color                  : ;
     --blockquote-em-font-family         : ;
@@ -653,4 +653,16 @@
   }
 }
 
+
+/* markdown customization */
+.markdown-section {
+  position: relative;
+  max-width: var(--content-max-width);
+  margin: 2rem auto;
+  padding: 3rem 45px;
+}
+
+.cover-image {
+  position: ablsolute;
+}
 

@@ -20,7 +20,7 @@ What happens when we exclude/discriminate at the molecular level? It's deeply co
 
 \* As Nuria pointed out, science (in the academia) is not all flowers and happiness. Scientists are also working (currently) within systems of power that imposes control on what gets funded, what gets published, and who gets access.
 
-!!! info "Cool and open sites"
+> **Cool and open sites**
     - [iGem](https://igem.org/)
     - [BioHack Academy](https://assets.waag.org/biohackacademy/)
     - [ENCODE](https://www.genome.gov/Funded-Programs-Projects/ENCODE-Project-ENCyclopedia-Of-DNA-Elements)
@@ -28,11 +28,13 @@ What happens when we exclude/discriminate at the molecular level? It's deeply co
 ## Activities
 ### Growing Bacteria
 
-![](../../images/Bio-and-Agri-Zero/petri-dish-microscope.gif){ align=left } Tho I was not present when the class prepared the petri dishes, it was interesting and a little disgusting to see what they grew. It the following days a few people were getting a bit sick, might it be because of the bodily fluids and bacteria we were growing in the classroom??  
+![](../../images/Bio-and-Agri-Zero/petri-dish-microscope.gif)   
+Tho I was not present when the class prepared the petri dishes, it was interesting and a little disgusting to see what they grew. It the following days a few people were getting a bit sick, might it be because of the bodily fluids and bacteria we were growing in the classroom??  
 
 
 ### Spirulina
-![](../../images/Bio-and-Agri-Zero/bubbling-spirulina.gif){ align=left } We got to see and taste spirulina, the new superfood! 
+![](../../images/Bio-and-Agri-Zero/bubbling-spirulina.gif)   
+We got to see and taste spirulina, the new superfood!  
 Spirulina is a biomass of cyanobacteria (blue-green algae) that can be consumed by humans and animals. For me, the spirulina (spread) has no taste nor smell, it's close to tofu. It's green and that may be its most off-puttng property.  
 
 ### My Designed Experiment
