@@ -36,5 +36,5 @@
     - [Git Support](term1/02-Documenting-design/Git-problems.md)
     - [Readables](term1/99-Notes/Readables.md)
     - [Kite Workshop](side-quests/Kite-workshop.md)
-    - [Pure Gold Workshop](#)
+    - [Pure Gold Workshop](side-quests/Pure-gold-workshop.md)
     - [Notes](term1/99-Notes/DD-Notes.md)
