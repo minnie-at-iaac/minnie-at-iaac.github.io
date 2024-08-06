@@ -13,6 +13,7 @@
     Relating to my overall design project, what I would take from this is that I should be looking for ways to bring out child-like curiosity and trying to bring out in others the same passion that I (in this case, our group) have.
     
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aSSOlwAWv4w?si=fHlp9-sjzdlqoPve" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<small>✨ AI-assisted ✨</small>
 
 
 

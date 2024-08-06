@@ -1,4 +1,5 @@
 ## Activities
+<small>✨ AI-assisted ✨</small>  
 With Carmen and Sofie, we explored different and fun things we cna do with AI.
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTGLIS8vKvbj_T2xZObPBd-doUXChFSSf233dfZxC36iLFYuVIHmLY73h5h5Ruo6-SvVwyKgC5U3b7K/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="629" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

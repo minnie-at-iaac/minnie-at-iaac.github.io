@@ -38,5 +38,6 @@ We got to see and taste spirulina, the new superfood!
 Spirulina is a biomass of cyanobacteria (blue-green algae) that can be consumed by humans and animals. For me, the spirulina (spread) has no taste nor smell, it's close to tofu. It's green and that may be its most off-puttng property.  
 
 ### My Designed Experiment
+<small>✨ AI-assisted ✨</small>
 My proposal is about [Engineering Sars-Cov-2 and Utilizing Computational Tools to
 Combat Brain Cancer](https://drive.google.com/file/d/1SxK5X1OGQcMC16fJDcrWC0a8yMAQ5Amf/view?usp=drive_link). I've chosen a realy hard and complex topic but I thought to give it a try.  

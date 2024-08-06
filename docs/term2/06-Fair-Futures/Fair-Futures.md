@@ -1,4 +1,5 @@
 # Fair Future(s) | Designing with Collective Intelligence
+<small>✨ AI-assisted ✨</small>
 
 !!! info "Faculty, Facilitators, Guests"
     Jessica Guy  

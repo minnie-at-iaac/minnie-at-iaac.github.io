@@ -12,6 +12,8 @@
 
 I will put my thoughts, reflections, projects, etc. in this space as I take the  **[Master in Design for Emergent Futures](https://iaac.net/educational-programmes/masters-programmes/master-in-design-for-emergent-futures-mdef "weeee")** at IAAC and ELISAVA this 2023-24.  
 
+> The use of AI tools is allowed in the program so we use them freely. I've tagged the pages with <small>✨ AI-assisted ✨</small>  to explicitly indicate when I used AI (most likely OpenAI).
+
 
 ## Who <span data-tippy-content='Es: Quién?; Tag: Sino?'>:speech_balloon:</span>
 I am Emmanuelle Alcazaren Pangilinan // Minnie  

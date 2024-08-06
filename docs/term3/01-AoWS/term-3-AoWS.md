@@ -1,4 +1,6 @@
-The AoWS cards were developedin the early days of the MDEF program. A lot has changed since hence the necessity to update the cards.
+# Atlas of Weak Signals
+<small>✨ AI-assisted ✨</small>  
+The AoWS cards were developed in the early days of the MDEF program. A lot has changed since hence the necessity to update the cards.
 
 Our group, with Albert, Dhrishya and Flora, tackled the theme of "Biological" initially. We discussed various interests, "content", publications that we found as emerging.
 

@@ -17,6 +17,7 @@ An interactive lamp made of scrap materials, which lights up as one holds it
 For a week, I sent people from different Fablabs and makerspaces here in Barcelona and the Philippines, a site where they would answer a questionnaire asking about one's current activities in the lab, materials and opinions regarding the Donut Economic Model. The answers of these participants were presented in a visual and interactive way. 
 
 ### el basuradar
+<small>✨ AI ✨</small>  
 What if planet earth made a trash detection AI?
 
 ![](../../images/Design-Dialogues/exhibit-space.png)
