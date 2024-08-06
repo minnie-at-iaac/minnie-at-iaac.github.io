@@ -25,3 +25,5 @@ The amazing team:
 @lakitu_s
 @olasn0g
 @kotsengkuba
+
+- Read more at the [Elisava website](https://www.elisava.net/en/agenda/new-edition-of-the-masters-interdisciplinary-workshops-with-kitelab-raw-color-and-honey-bunny/)
