@@ -1,7 +1,7 @@
 ![](../images/Thesis/circuits_no_tirar.jpg)
 # **UNTRASHING: being in-between trash, sounds and community**
 
-<small>✨ AI-assisted text ✨</small>
+<small>✨ AI-assisted ✨</small>
 
 ## Research question(s):
 
