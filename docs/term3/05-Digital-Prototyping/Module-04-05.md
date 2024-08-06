@@ -1,7 +1,10 @@
 ![](../../images/Thermal-printer/thermal.jpg)  
-<iframe width="100%" height="480" src="https://www.youtube.com/embed/Wuq92poDpzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+# Audio Reactive Thermal Printer
 
 For the Modules 4 and 5, we made a thermal printer audio reactive such that it listens live from the microphone and prints whenever the audio is loud. Modules 4 and 5 was the opportunity to explore signal transmission and processing. Although they introduced MaxOSC, we switched to Pure Data because it is fully open source and we were more interested in working  with audio.
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/Wuq92poDpzo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### How it works? 
 

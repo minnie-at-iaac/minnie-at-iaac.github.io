@@ -37,4 +37,5 @@
     - [Readables](term1/99-Notes/Readables.md)
     - [Kite Workshop](side-quests/Kite-workshop.md)
     - [Pure Gold Workshop](side-quests/Pure-gold-workshop.md)
+    - [Sounds and Music](side-quests/Sonar.md)
     - [Notes](term1/99-Notes/DD-Notes.md)
