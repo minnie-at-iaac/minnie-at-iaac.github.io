@@ -4,7 +4,7 @@
 
 # About
 
-![](../images/minniecrop.jpg 'ahh boba tea')  
+![](../images/minniverse.png 'minniverse ✨ <AI-generated> ✨')  
 
 
 ## What <span data-tippy-content='Es: Qué?; Tag: Ano?'>:speech_balloon:</span>
@@ -40,7 +40,21 @@ I'm not so good with words, but I'll try
 Statement of Purpose  
 
 <s>{--my purpose is to find a better purpose--}</s>  
-(idk maybe) to push the boundaries of my design practice
+(idk maybe) to push the boundaries of my design practice  
+
+## What now <span data-tippy-content='Tagalog: Ano na ngayon?'>:speech_balloon:</span>
+Well, we did it. We finished MDEF 🥳  
+![](../images/mdef-graduation.jpg 'graduation and award')  
+
+Time to put our learnings into the real world and make an impact. I'm (we are, as Jaleo project)  probably going to explore open calls and residencies, as well as opportunities in the makerspace network.
+
+If you are still reading this, I am open and happy to collaborate on projects! Drop a mail below!
 
 ---
-if you're bored, you can check out **[my portfolio website](https://minniemakes.co "weeee")**
+## Contact
+Email <minnie.pangilinan@gmail.com>  
+Instagram <https://www.instagram.com/kotsengkuba/> <https://www.instagram.com/minniemakestoys/>  
+LinkeIn <https://www.linkedin.com/in/minnie-pangilinan/>
+
+---
+And if you're bored, you can check out **[my other website](https://minniemakes.co "weeee")**
