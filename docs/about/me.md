@@ -17,7 +17,7 @@ I will put my thoughts, reflections, projects, etc. in this space as I take the 
 
 ## Who <span data-tippy-content='Es: Quién?; Tag: Sino?'>:speech_balloon:</span>
 I am Emmanuelle Alcazaren Pangilinan // Minnie  
-a maker, designer, animator, artist
+a maker, designer, coder, animator, artist
   
 My background is in Industrial Design and Computer Science  
 I've worked in IT, with start-ups, with medical profesionals, with fablabs and other designers  
