@@ -1,4 +1,6 @@
 ![](../../images/Research-trip/hike_scene.jpg)
+# Research Trip
+
 ## Sensing and Picking, Plants and Pottery
 
 ![](../../images/Research-trip/sensing_02.png)
@@ -24,7 +26,9 @@ A jam is a creative collaboration, more common in creating music, but for me the
 Our food was super, hands-down impressed with all the meals (we should publish a recipe book!).
 
 ## Playing with Pixels
-For my project, I wanted to tackle the transitions and interactions in between the real and virtual (physical and digital). I took inspiration from snow, our jam sessions and nature. More details [here](/term2/08-Research-Trip/Playing-with-Pixels.md)
+For my project, I wanted to tackle the transitions and interactions in between the real and virtual (physical and digital). I took inspiration from snow, our jam sessions and nature. 
+
+Read more about it [**here!**](/term2/08-Research-Trip/Playing-with-Pixels.md "bleepbloop")
 
 As a change, I didn't make a trash-based project in this trip. Although I wanted to, there were a lot of stimuli that inspired me to do something else. This led me to a renewed interest in sound-making, which I might now incorporate in my final MDEF project.
 

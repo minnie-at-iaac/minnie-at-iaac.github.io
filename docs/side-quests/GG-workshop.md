@@ -8,6 +8,6 @@ Wished we had time to do more sessions but the schedule just didn't cooperate.
 <center><img src="../../images/GG-Workshop/ggw-pub.png" width="200"></center>  
 
 ![](../../images/GG-Workshop/ggw-01.png)
-![](../../images/GG-Workshop/ggw-02.png)
+![](../../images/GG-Workshop/ggw-02.png "grasshopper")
 
  
